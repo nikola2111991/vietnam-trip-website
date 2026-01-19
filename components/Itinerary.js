@@ -32,7 +32,7 @@ export default function Itinerary() {
                 <div key={index}>
                   {/* Section Header */}
                   {showSectionHeader && (
-                    <div className="text-center py-12 lg:py-16 relative z-[999]">
+                    <div className="text-center py-12 lg:py-16 relative z-[99]">
                       <div className="inline-block px-8 py-4 bg-olive-600 text-white rounded-full shadow-xl">
                         <h3 className="text-lg font-bold tracking-wider">
                           {item.section}
