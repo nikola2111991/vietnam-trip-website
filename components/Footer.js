@@ -52,18 +52,18 @@ export default function Footer() {
             <div className="hidden lg:grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="rounded-2xl overflow-hidden shadow-xl">
-                  <img src="/images/hvala-1.jpg" alt="Vietnam" className="w-full h-40 object-cover" />
+                  <img src="/images/hvala-1.jpg" alt="Vietnam" className="w-full h-40 object-cover" loading="lazy" />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-xl">
-                  <img src="/images/hvala-2.jpg" alt="Vietnam" className="w-full h-56 object-cover" />
+                  <img src="/images/hvala-2.jpg" alt="Vietnam" className="w-full h-56 object-cover" loading="lazy" />
                 </div>
               </div>
               <div className="space-y-4 pt-8">
                 <div className="rounded-2xl overflow-hidden shadow-xl">
-                  <img src="/images/hvala-3.jpg" alt="Vietnam" className="w-full h-56 object-cover" />
+                  <img src="/images/hvala-3.jpg" alt="Vietnam" className="w-full h-56 object-cover" loading="lazy" />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-xl">
-                  <img src="/images/hvala-4.jpg" alt="Vietnam" className="w-full h-40 object-cover" />
+                  <img src="/images/hvala-4.jpg" alt="Vietnam" className="w-full h-40 object-cover" loading="lazy" />
                 </div>
               </div>
             </div>

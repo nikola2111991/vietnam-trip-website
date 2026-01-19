@@ -16,7 +16,7 @@ export const heroContent = {
   title: "Việt Nam",
   dates: "08.04. - 22.04.2026",
   cta: "Rezerviši Svoje Mesto",
-  backgroundImage: "/images/hero.png",
+  backgroundImage: "/images/hero.jpg",
 };
 
 export const introContent = {

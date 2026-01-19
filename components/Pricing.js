@@ -100,6 +100,7 @@ export default function Pricing() {
                 src="/images/za-koga-nije.jpg"
                 alt="Za koga nije ova avantura"
                 className="w-full h-[500px] object-cover"
+                loading="lazy"
               />
             </div>
 

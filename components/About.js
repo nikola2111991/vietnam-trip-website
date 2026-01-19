@@ -86,6 +86,7 @@ export default function About() {
                     src={galleryImages[0]}
                     alt="Vietnam"
                     className="w-full h-64 object-cover"
+                    loading="lazy"
                   />
                 </div>
                 <div className="rounded-3xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-500">
@@ -93,6 +94,7 @@ export default function About() {
                     src={galleryImages[1]}
                     alt="Vietnam"
                     className="w-full h-48 object-cover"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -102,6 +104,7 @@ export default function About() {
                     src={galleryImages[2]}
                     alt="Vietnam"
                     className="w-full h-48 object-cover"
+                    loading="lazy"
                   />
                 </div>
                 <div className="rounded-3xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-500">
@@ -109,6 +112,7 @@ export default function About() {
                     src={galleryImages[3]}
                     alt="Vietnam"
                     className="w-full h-64 object-cover"
+                    loading="lazy"
                   />
                 </div>
               </div>
