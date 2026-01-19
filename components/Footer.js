@@ -52,18 +52,18 @@ export default function Footer() {
             <div className="hidden lg:grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="rounded-2xl overflow-hidden shadow-xl">
-                  <img src={galleryImages[4]} alt="Vietnam" className="w-full h-40 object-cover" />
+                  <img src="/images/hvala-1.jpg" alt="Vietnam" className="w-full h-40 object-cover" />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-xl">
-                  <img src={galleryImages[5]} alt="Vietnam" className="w-full h-56 object-cover" />
+                  <img src="/images/hvala-2.jpg" alt="Vietnam" className="w-full h-56 object-cover" />
                 </div>
               </div>
               <div className="space-y-4 pt-8">
                 <div className="rounded-2xl overflow-hidden shadow-xl">
-                  <img src={galleryImages[0]} alt="Vietnam" className="w-full h-56 object-cover" />
+                  <img src="/images/hvala-3.jpg" alt="Vietnam" className="w-full h-56 object-cover" />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-xl">
-                  <img src={galleryImages[1]} alt="Vietnam" className="w-full h-40 object-cover" />
+                  <img src="/images/hvala-4.jpg" alt="Vietnam" className="w-full h-40 object-cover" />
                 </div>
               </div>
             </div>
@@ -77,9 +77,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <span className="text-lg font-serif font-bold text-white">
-                QUEEN <span className="text-gold-400">of</span> COMPASS
-              </span>
+              <img src="/images/logo.png" alt="Queen of Compass" className="h-10 w-auto" />
             </div>
 
             {/* Copyright */}

@@ -29,11 +29,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center space-x-2">
-            <span className={`text-xl font-serif font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-olive-700' : 'text-white'
-            }`}>
-              QUEEN <span className="text-gold-400">of</span> COMPASS
-            </span>
+            <img src="/images/logo.png" alt="Queen of Compass" className="h-12 w-auto" />
           </a>
 
           {/* Desktop Navigation */}

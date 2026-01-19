@@ -16,7 +16,7 @@ export const heroContent = {
   title: "Việt Nam",
   dates: "08.04. - 22.04.2026",
   cta: "Rezerviši Svoje Mesto",
-  backgroundImage: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=80&w=2070",
+  backgroundImage: "/images/hero.png",
 };
 
 export const introContent = {
@@ -72,7 +72,7 @@ export const itineraryContent = [
     title: "DOLAZAK U HANOI",
     location: "Hanoi",
     description: "Dolazak u Hanoi i transfer do pažljivo odabranog hotela u srcu grada. Prvi susret sa Vijetnamom je miran, dan je za odmor, aklimatizaciju i upijanje atmosfere grada. Uveče zajednička večera dobrodošlice: uvod u lokalnu kuhinju, upoznavanje grupe i prvi razgovori o onome što nas očekuje.",
-    image: "https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?q=80&w=2023",
+    image: "/images/8-april.jpg",
     section: "DOBRODOŠLI U VIJETNAM",
   },
   {
@@ -87,14 +87,14 @@ export const itineraryContent = [
     title: "HANOI: SLOBODAN DAN",
     location: "Hanoi",
     description: "Istražite grad svojim tempom. Šetnja kroz antikvarnice, street food uličice, ili satima uživanje u lokalnim kafićima. Dajemo vam lokalne preporuke, ali izbor je potpuno vaš.",
-    image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=80&w=2070",
+    image: "/images/10-april.jpg",
   },
   {
     day: "11. APRIL",
     title: "HANOI → PU LUONG",
     location: "Pu Luong",
     description: "Napustili smo urbani ritam i krećemo ka manje otkrivenom Vijetnamu. Put vodi kroz planine, sela etničkih manjina i terase pirinčanih polja. Pu Luong je sirova, neotkrivena priroda, mesto gde se oseća autentični duh severnog Vijetnama. Smeštaj u luksuznom eco resortu.",
-    image: "https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=2070",
+    image: "/images/11-april.jpg",
     section: "PRIRODA OD KOJE ZASTAJE DAH",
   },
   {
@@ -102,35 +102,35 @@ export const itineraryContent = [
     title: "PRIRODA PU LUONGA",
     location: "Pu Luong",
     description: "Dan provodimo hodajući kroz sela etničkih manjina, sa lokalnim vodičem šetamo kroz terase pirinčanih polja i planinske staze. Susrećemo lokalne ljude, učimo o njihovim običajima i svakodnevici.",
-    image: "https://images.unsplash.com/photo-1504457047772-27faf1c00561?q=80&w=2047",
+    image: "/images/12-april.jpg",
   },
   {
     day: "13. APRIL",
     title: "PU LUONG → TAM COC",
     location: "Tam Coc / Ninh Binh",
     description: "Put ka Ninh Binhu vodi kroz dramatične pejzaže koje često nazivaju 'kopnenim Ha Longom'. Rečni kanali, iznenadni vrhovi krečnjačkih stena i tišina koja obuzima. Smeštaj u retreat resortu uklopljenom u prirodu.",
-    image: "https://images.unsplash.com/photo-1573790387438-4da905039392?q=80&w=2025",
+    image: "/images/13-april.jpg",
   },
   {
     day: "14. APRIL",
     title: "TAM COC: BAJKA VIJETNAMA",
     location: "Tam Coc",
     description: "Dan istraživanja Tam Coc prirodnog rezervata biciklima kroz pirinčana polja, male staze i sela. Poseta hramovima u pecinama i penjanje na Mua Cave za panoramski pogled. Popodne jedinstvena vožnja čamcem kroz reke i kanale.",
-    image: "https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=2070",
+    image: "/images/14-april.jpg",
   },
   {
     day: "15. APRIL",
     title: "TAM COC: SLOBODAN DAN",
     location: "Tam Coc",
     description: "Jutarnja meditacija i Qi Gong sa Irenom za vraćanje sebi. Dan je za bazen, šetnje, vožnju bicikla ili istraživanje prirode oko resorta.",
-    image: "https://images.unsplash.com/photo-1552553302-9211bf7f7053?q=80&w=2070",
+    image: "/images/15-april.jpg",
   },
   {
     day: "16. APRIL",
     title: "TAM COC → HA LONG ZALIV",
     location: "Ha Long Bay",
     description: "Rani polazak ka Ha Long zaliv. Ukrcavanje na luksuzni kruzer sa privatnim sobama okrenutim ka zalivu. Dan na vodi: kajak, obilazak pećina, cooking class, istraživanje Ha Long zaliva. Večernji ribolov i zajednička večera. Noćenje na brodu.",
-    image: "https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=2070",
+    image: "/images/16-april.jpg",
     section: "SELIMO SE U CENTRALNI VIJETNAM",
   },
   {
@@ -138,28 +138,28 @@ export const itineraryContent = [
     title: "HA LONG ZALIV → DA NANG",
     location: "Da Nang",
     description: "Drugi dan započinje ranim buđenjem i blagim vežbama tai chi-ja na palubi, dok se zaliv polako budi. Transfer do aerodroma i let za Da Nang. Smeštaj u prelepom hotelu blizu plaže.",
-    image: "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?q=80&w=2080",
+    image: "/images/17-april.jpg",
   },
   {
     day: "18. APRIL",
     title: "LOKALCI U DA NANGU",
     location: "Da Nang",
     description: "Jutarnja poseta Son Tra planini i Lady Buddha hramu, učenje o budizmu i lokalnim običajima. Istraživanje Da Nanga sa lokalnim tempom: pijace, ulična hrana, kafići. Veče posvećeno Dragon Bridge show-u.",
-    image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=80&w=2070",
+    image: "/images/18-april.jpg",
   },
   {
     day: "19. APRIL",
     title: "DA NANG: SLOBODAN DAN",
     location: "Da Nang",
     description: "Jutarnja kakao ceremonija i kratka meditacija na plaži. Dan bez plana: sunce, more, masaže, sportovi na vodi ili kokteli u beach baru. Dan za potpuni reset.",
-    image: "https://images.unsplash.com/photo-1590139446915-92c0d6da9ef8?q=80&w=2071",
+    image: "/images/19-april.jpg",
   },
   {
     day: "20. APRIL",
     title: "ŠARMANTNI HOI AN",
     location: "Hoi An",
     description: "Selimo se u privatnu vilu u Hoi Anu. Grad svetla, boja i fotogenične arhitekture. Oblačenje tradicionalnog Ao Dai uz profesionalno fotografisanje. Radionica izrade lampiona. Veče tradicionalno puštanje lampiona na reci.",
-    image: "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?q=80&w=2080",
+    image: "/images/20-april.jpg",
     section: "GRAD LAMPIONA, KROJAČA I KERAMIKE",
   },
   {
@@ -167,14 +167,14 @@ export const itineraryContent = [
     title: "HOI AN: SLOBODAN DAN",
     location: "Hoi An",
     description: "Jutarnji doručak sa degustacijom egzotičnog voća. Dan bez žurbe za istraživanje grada i okoline: biciklizam kroz sela, kokosova šuma, poseta lokalnim zanatima ili shopping po meri. Uveče zajednička večera i pakovanje.",
-    image: "https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=2070",
+    image: "/images/21-april.jpg",
   },
   {
     day: "22. APRIL",
     title: "ZAVRŠETAK ZAJEDNIČKE AVANTURE",
     location: "Hanoi",
     description: "Let za Hanoi. Za one koji žele da nastave individualno putovanje kroz Vijetnam, ili ostanu duže u Da Nangu, tu smo da vam pružimo savete i podršku.",
-    image: "https://images.unsplash.com/photo-1555921015-5532091f6026?q=80&w=2070",
+    image: "/images/22-april.jpg",
   },
 ];
 
@@ -238,10 +238,8 @@ export const footerContent = {
 };
 
 export const galleryImages = [
-  "https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=80&w=800",
-  "https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=800",
-  "https://images.unsplash.com/photo-1573790387438-4da905039392?q=80&w=800",
-  "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?q=80&w=800",
-  "https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=800",
-  "https://images.unsplash.com/photo-1504457047772-27faf1c00561?q=80&w=800",
+  "/images/istrazujemo-1.jpg",
+  "/images/istrazujemo-2.jpg",
+  "/images/istrazujemo-3.jpg",
+  "/images/istrazujemo-4.jpg",
 ];

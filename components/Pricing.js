@@ -97,8 +97,8 @@ export default function Pricing() {
             {/* Image */}
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1573790387438-4da905039392?q=80&w=2025"
-                alt="Vietnam Temple"
+                src="/images/za-koga-nije.jpg"
+                alt="Za koga nije ova avantura"
                 className="w-full h-[500px] object-cover"
               />
             </div>
