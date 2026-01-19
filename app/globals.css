@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@theme {
+  --color-olive-50: #f6f7f4;
+  --color-olive-100: #e8eae3;
+  --color-olive-200: #d2d6c9;
+  --color-olive-300: #b3baa3;
+  --color-olive-400: #939c7d;
+  --color-olive-500: #768161;
+  --color-olive-600: #5d6d3f;
+  --color-olive-700: #4a5832;
+  --color-olive-800: #3d4a29;
+  --color-olive-900: #343f26;
+
+  --color-gold-50: #fdf8f3;
+  --color-gold-100: #f9efe3;
+  --color-gold-200: #f2dcc5;
+  --color-gold-300: #e9c49e;
+  --color-gold-400: #d4a574;
+  --color-gold-500: #c49a6c;
+  --color-gold-600: #b07d4a;
+  --color-gold-700: #93643f;
+  --color-gold-800: #785238;
+  --color-gold-900: #634530;
+
+  --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family-serif: 'Playfair Display', Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-family-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-olive-600 rounded-full shadow-lg hover:bg-olive-700 hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-olive-700 bg-white border-2 border-olive-600 rounded-full hover:bg-olive-50 transform hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-olive-800 leading-tight;
+  }
+
+  .card {
+    @apply bg-white rounded-3xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition-all duration-500;
+  }
+
+  .glass {
+    @apply bg-white/80 backdrop-blur-lg;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5d6d3f;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a5832;
+}
