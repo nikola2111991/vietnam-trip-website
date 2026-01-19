@@ -16,7 +16,7 @@ export const heroContent = {
   title: "Việt Nam",
   dates: "08.04. - 22.04.2026",
   cta: "Rezerviši Svoje Mesto",
-  backgroundImage: "/images/hero.jpg",
+  backgroundImage: "/images/hero.webp",
 };
 
 export const introContent = {
@@ -72,7 +72,7 @@ export const itineraryContent = [
     title: "DOLAZAK U HANOI",
     location: "Hanoi",
     description: "Dolazak u Hanoi i transfer do pažljivo odabranog hotela u srcu grada. Prvi susret sa Vijetnamom je miran, dan je za odmor, aklimatizaciju i upijanje atmosfere grada. Uveče zajednička večera dobrodošlice: uvod u lokalnu kuhinju, upoznavanje grupe i prvi razgovori o onome što nas očekuje.",
-    image: "/images/8-april.jpg",
+    image: "/images/8-april.webp",
     section: "DOBRODOŠLI U VIJETNAM",
   },
   {
@@ -87,14 +87,14 @@ export const itineraryContent = [
     title: "HANOI: SLOBODAN DAN",
     location: "Hanoi",
     description: "Istražite grad svojim tempom. Šetnja kroz antikvarnice, street food uličice, ili satima uživanje u lokalnim kafićima. Dajemo vam lokalne preporuke, ali izbor je potpuno vaš.",
-    image: "/images/10-april.jpg",
+    image: "/images/10-april.webp",
   },
   {
     day: "11. APRIL",
     title: "HANOI → PU LUONG",
     location: "Pu Luong",
     description: "Napustili smo urbani ritam i krećemo ka manje otkrivenom Vijetnamu. Put vodi kroz planine, sela etničkih manjina i terase pirinčanih polja. Pu Luong je sirova, neotkrivena priroda, mesto gde se oseća autentični duh severnog Vijetnama. Smeštaj u luksuznom eco resortu.",
-    image: "/images/11-april.jpg",
+    image: "/images/11-april.webp",
     section: "PRIRODA OD KOJE ZASTAJE DAH",
   },
   {
@@ -102,35 +102,35 @@ export const itineraryContent = [
     title: "PRIRODA PU LUONGA",
     location: "Pu Luong",
     description: "Dan provodimo hodajući kroz sela etničkih manjina, sa lokalnim vodičem šetamo kroz terase pirinčanih polja i planinske staze. Susrećemo lokalne ljude, učimo o njihovim običajima i svakodnevici.",
-    image: "/images/12-april.jpg",
+    image: "/images/12-april.webp",
   },
   {
     day: "13. APRIL",
     title: "PU LUONG → TAM COC",
     location: "Tam Coc / Ninh Binh",
     description: "Put ka Ninh Binhu vodi kroz dramatične pejzaže koje često nazivaju 'kopnenim Ha Longom'. Rečni kanali, iznenadni vrhovi krečnjačkih stena i tišina koja obuzima. Smeštaj u retreat resortu uklopljenom u prirodu.",
-    image: "/images/13-april.jpg",
+    image: "/images/13-april.webp",
   },
   {
     day: "14. APRIL",
     title: "TAM COC: BAJKA VIJETNAMA",
     location: "Tam Coc",
     description: "Dan istraživanja Tam Coc prirodnog rezervata biciklima kroz pirinčana polja, male staze i sela. Poseta hramovima u pecinama i penjanje na Mua Cave za panoramski pogled. Popodne jedinstvena vožnja čamcem kroz reke i kanale.",
-    image: "/images/14-april.jpg",
+    image: "/images/14-april.webp",
   },
   {
     day: "15. APRIL",
     title: "TAM COC: SLOBODAN DAN",
     location: "Tam Coc",
     description: "Jutarnja meditacija i Qi Gong sa Irenom za vraćanje sebi. Dan je za bazen, šetnje, vožnju bicikla ili istraživanje prirode oko resorta.",
-    image: "/images/15-april.jpg",
+    image: "/images/15-april.webp",
   },
   {
     day: "16. APRIL",
     title: "TAM COC → HA LONG ZALIV",
     location: "Ha Long Bay",
     description: "Rani polazak ka Ha Long zaliv. Ukrcavanje na luksuzni kruzer sa privatnim sobama okrenutim ka zalivu. Dan na vodi: kajak, obilazak pećina, cooking class, istraživanje Ha Long zaliva. Večernji ribolov i zajednička večera. Noćenje na brodu.",
-    image: "/images/16-april.jpg",
+    image: "/images/16-april.webp",
     section: "SELIMO SE U CENTRALNI VIJETNAM",
   },
   {
@@ -138,28 +138,29 @@ export const itineraryContent = [
     title: "HA LONG ZALIV → DA NANG",
     location: "Da Nang",
     description: "Drugi dan započinje ranim buđenjem i blagim vežbama tai chi-ja na palubi, dok se zaliv polako budi. Transfer do aerodroma i let za Da Nang. Smeštaj u prelepom hotelu blizu plaže.",
-    image: "/images/17-april.jpg",
+    image: "/images/17-april.webp",
   },
   {
     day: "18. APRIL",
     title: "LOKALCI U DA NANGU",
     location: "Da Nang",
     description: "Jutarnja poseta Son Tra planini i Lady Buddha hramu, učenje o budizmu i lokalnim običajima. Istraživanje Da Nanga sa lokalnim tempom: pijace, ulična hrana, kafići. Veče posvećeno Dragon Bridge show-u.",
-    image: "/images/18-april.jpg",
+    image: "/images/18-april.webp",
   },
   {
     day: "19. APRIL",
     title: "DA NANG: SLOBODAN DAN",
     location: "Da Nang",
     description: "Jutarnja kakao ceremonija i kratka meditacija na plaži. Dan bez plana: sunce, more, masaže, sportovi na vodi ili kokteli u beach baru. Dan za potpuni reset.",
-    image: "/images/19-april.jpg",
+    image: "/images/19-april.webp",
+    imagePosition: "top",
   },
   {
     day: "20. APRIL",
     title: "ŠARMANTNI HOI AN",
     location: "Hoi An",
     description: "Selimo se u privatnu vilu u Hoi Anu. Grad svetla, boja i fotogenične arhitekture. Oblačenje tradicionalnog Ao Dai uz profesionalno fotografisanje. Radionica izrade lampiona. Veče tradicionalno puštanje lampiona na reci.",
-    image: "/images/20-april.jpg",
+    image: "/images/20-april.webp",
     section: "GRAD LAMPIONA, KROJAČA I KERAMIKE",
   },
   {
@@ -167,14 +168,14 @@ export const itineraryContent = [
     title: "HOI AN: SLOBODAN DAN",
     location: "Hoi An",
     description: "Jutarnji doručak sa degustacijom egzotičnog voća. Dan bez žurbe za istraživanje grada i okoline: biciklizam kroz sela, kokosova šuma, poseta lokalnim zanatima ili shopping po meri. Uveče zajednička večera i pakovanje.",
-    image: "/images/21-april.jpg",
+    image: "/images/21-april.webp",
   },
   {
     day: "22. APRIL",
     title: "ZAVRŠETAK ZAJEDNIČKE AVANTURE",
     location: "Hanoi",
     description: "Let za Hanoi. Za one koji žele da nastave individualno putovanje kroz Vijetnam, ili ostanu duže u Da Nangu, tu smo da vam pružimo savete i podršku.",
-    image: "/images/22-april.jpg",
+    image: "/images/22-april.webp",
   },
 ];
 
@@ -238,8 +239,8 @@ export const footerContent = {
 };
 
 export const galleryImages = [
-  "/images/istrazujemo-1.jpg",
-  "/images/istrazujemo-2.jpg",
-  "/images/istrazujemo-3.jpg",
-  "/images/istrazujemo-4.jpg",
+  "/images/istrazujemo-1.webp",
+  "/images/istrazujemo-2.webp",
+  "/images/istrazujemo-3.webp",
+  "/images/istrazujemo-4.webp",
 ];

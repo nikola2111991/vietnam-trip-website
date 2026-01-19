@@ -5,6 +5,10 @@ export const metadata = {
   description: '15-dnevno luksuzno autentično putovanje kroz severni i centralni Vijetnam. Hanoi, Pu Luong, Ha Long zaliv, Da Nang, Hoi An. Organizuju Irena i Bojan koji žive u Vijetnamu.',
   keywords: 'vijetnam putovanje, vietnam travel, luksuzno putovanje, hanoi, ha long bay, hoi an, da nang, pu luong, autentično putovanje, queen of compass',
   authors: [{ name: 'Queen of Compass' }],
+  icons: {
+    icon: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   openGraph: {
     title: 'Autentični Vijetnam | April 2026',
     description: '15-dnevno luksuzno autentično putovanje kroz Vijetnam sa Irenom i Bojanom',

@@ -97,7 +97,7 @@ export default function Pricing() {
             {/* Image */}
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="/images/za-koga-nije.jpg"
+                src="/images/za-koga-nije.webp"
                 alt="Za koga nije ova avantura"
                 className="w-full h-[500px] object-cover"
                 loading="lazy"

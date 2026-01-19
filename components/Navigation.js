@@ -29,7 +29,12 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center space-x-2">
-            <img src="/images/logo.png" alt="Queen of Compass" className="h-12 w-auto" />
+            <img
+              src="/images/logo.webp"
+              alt="Queen of Compass"
+              className="h-12 w-auto transition-all duration-300"
+              style={isScrolled ? { filter: 'invert(0%) sepia(84%) saturate(7437%) hue-rotate(203deg) brightness(110%) contrast(114%)' } : {}}
+            />
           </a>
 
           {/* Desktop Navigation */}
