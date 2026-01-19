@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autentični Vijetnam 2026 | Queen of Compass - Luksuzno putovanje sa lokalcima</title>
+    <meta name="description" content="15-dnevno luksuzno putovanje kroz Vijetnam sa Irenom i Bojanom koji tamo žive. Autentična iskustva, 5★ smeštaj, mala grupa. 08-22. april 2026.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Autentični Vijetnam 2026 | Queen of Compass">
+    <meta property="og:description" content="Doživite Vijetnam očima ljudi koji tamo žive. 15 dana autentičnog luksuza.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=80&w=1200">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        olive: {
+                            50: '#f6f7f4',
+                            100: '#e8eae3',
+                            200: '#d2d6c9',
+                            300: '#b3baa3',
+                            400: '#939c7d',
+                            500: '#768161',
+                            600: '#5d6d3f',
+                            700: '#4a5832',
+                            800: '#3d4a29',
+                            900: '#343f26',
+                        },
+                        gold: {
+                            50: '#fdf8f3',
+                            100: '#f9efe3',
+                            200: '#f2dcc5',
+                            300: '#e9c49e',
+                            400: '#d4a574',
+                            500: '#c49a6c',
+                            600: '#b07d4a',
+                            700: '#93643f',
+                            800: '#785238',
+                            900: '#634530',
+                        }
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Lato', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "Queen of Compass",
+        "description": "Autentična luksuzna putovanja kroz Vijetnam sa lokalnim vodičima",
+        "url": "https://vietnam-trip-website.vercel.app",
+        "image": "https://images.unsplash.com/photo-1583417319070-4a69db38a482",
+        "priceRange": "€€€",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "47"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --olive-600: #5d6d3f;
+            --olive-700: #4a5832;
+            --olive-800: #3d4a29;
+            --gold-400: #d4a574;
+        }
+
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Lato', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .animate-fade-up {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+
+        .float { animation: float 3s ease-in-out infinite; }
+
+        /* Scroll animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: var(--olive-600); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--olive-700); }
+
+        /* FAQ Accordion */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-top: 1rem;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #d4a574 0%, #e9c49e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="text-white font-heading font-bold text-xl tracking-wide">
+                    Queen of Compass
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#o-putovanju" class="text-white/90 hover:text-gold-400 transition-colors text-sm font-medium">O Putovanju</a>
+                    <a href="#itinerer" class="text-white/90 hover:text-gold-400 transition-colors text-sm font-medium">Itinerer</a>
+                    <a href="#cene" class="text-white/90 hover:text-gold-400 transition-colors text-sm font-medium">Cene</a>
+                    <a href="#faq" class="text-white/90 hover:text-gold-400 transition-colors text-sm font-medium">Pitanja</a>
+                    <a href="#kontakt" class="bg-gold-400 text-olive-900 px-6 py-2.5 rounded-full font-semibold hover:bg-gold-300 transition-all hover:scale-105">
+                        Rezerviši
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-olive-800/95 backdrop-blur-lg">
+            <div class="px-4 py-6 space-y-4">
+                <a href="#o-putovanju" class="block text-white/90 hover:text-gold-400 py-2">O Putovanju</a>
+                <a href="#itinerer" class="block text-white/90 hover:text-gold-400 py-2">Itinerer</a>
+                <a href="#cene" class="block text-white/90 hover:text-gold-400 py-2">Cene</a>
+                <a href="#faq" class="block text-white/90 hover:text-gold-400 py-2">Pitanja</a>
+                <a href="#kontakt" class="block bg-gold-400 text-olive-900 px-6 py-3 rounded-full font-semibold text-center mt-4">
+                    Rezerviši Mesto
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?q=80&w=2070"
+                 alt="Vietnam"
+                 class="w-full h-full object-cover"
+                 loading="eager">
+            <div class="absolute inset-0 bg-gradient-to-b from-olive-900/60 via-olive-900/40 to-olive-900/80"></div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="absolute top-32 left-10 w-24 h-24 border border-gold-400/30 rounded-full float hidden lg:block"></div>
+        <div class="absolute bottom-40 right-16 w-32 h-32 border border-white/20 rounded-full float hidden lg:block" style="animation-delay: 1s;"></div>
+
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+            <!-- Trust Badge -->
+            <div class="animate-fade-up inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-8">
+                <div class="flex">
+                    <span class="text-gold-400">★★★★★</span>
+                </div>
+                <span class="text-white/90 text-sm">47 putnika, 100% bi ponovilo</span>
+            </div>
+
+            <p class="animate-fade-up delay-100 text-gold-400 text-sm md:text-base tracking-[0.3em] uppercase mb-4 font-heading font-medium">
+                Sa ljudima koji tamo žive
+            </p>
+
+            <h1 class="animate-fade-up delay-200 font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+                Autentični<br>
+                <span class="gradient-text">Vijetnam</span>
+            </h1>
+
+            <p class="animate-fade-up delay-300 text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-4 font-light">
+                15 dana kroz sever i centar Vijetnama. Ne kao turista — kao gost prijatelja koji tamo žive.
+            </p>
+
+            <div class="animate-fade-up delay-400 flex items-center justify-center gap-4 mb-10 text-white/70">
+                <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                    08 - 22. april 2026
+                </span>
+                <span class="w-1.5 h-1.5 bg-gold-400 rounded-full"></span>
+                <span>Samo 12 mesta</span>
+            </div>
+
+            <div class="animate-fade-up delay-500 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#kontakt" class="group bg-gold-400 text-olive-900 px-10 py-4 rounded-full font-heading font-bold text-lg hover:bg-gold-300 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-gold-400/25 flex items-center gap-2">
+                    Rezerviši Svoje Mesto
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+                <a href="#o-putovanju" class="text-white border-2 border-white/30 px-10 py-4 rounded-full font-heading font-semibold hover:bg-white/10 transition-all">
+                    Saznaj Više
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Problem/Solution Section -->
+    <section class="py-20 lg:py-28 bg-olive-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal text-center mb-16">
+                <p class="text-olive-600 font-heading font-semibold tracking-wider text-sm mb-4">RAZUMEMO VAS</p>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-olive-800 mb-6">
+                    Vijetnam vas privlači, ali...
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Problems -->
+                <div class="reveal space-y-6">
+                    <div class="flex gap-4 items-start p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-bold text-olive-800 mb-2">"Ne znam odakle da počnem"</h3>
+                            <p class="text-gray-600">Previše opcija, previše informacija, a svako priča drugačije. Izgubljeni ste u moru blogova i recenzija.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 items-start p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-bold text-olive-800 mb-2">"Bojim se turističkih zamki"</h3>
+                            <p class="text-gray-600">Niko ne želi da plati premium cenu za generičko iskustvo. Hoćete pravi Vijetnam, ne turistički.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 items-start p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-bold text-olive-800 mb-2">"Jezička barijera me plaši"</h3>
+                            <p class="text-gray-600">Kako ću se sporazumeti? Šta ako nešto krene po zlu? Daleko je od kuće.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution -->
+                <div class="reveal delay-200">
+                    <div class="bg-olive-700 rounded-3xl p-8 md:p-10 text-white relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-olive-600 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                        <div class="relative">
+                            <div class="w-16 h-16 bg-gold-400 rounded-2xl flex items-center justify-center mb-6">
+                                <svg class="w-8 h-8 text-olive-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl md:text-3xl font-heading font-bold mb-4">Zato smo mi tu.</h3>
+                            <p class="text-olive-100 text-lg leading-relaxed mb-6">
+                                Mi smo Irena i Bojan. <strong class="text-white">Živimo u Vijetnamu 5 godina.</strong>
+                                Znamo gde lokalci jedu, koje plaže nisu u vodičima, i kako izbeći sve zamke.
+                            </p>
+                            <p class="text-olive-100 leading-relaxed mb-6">
+                                Ovo nije klasična tura sa zastavicom. Ovo je putovanje sa prijateljima koji znaju svaki ćošak ove zemlje.
+                            </p>
+                            <div class="flex items-center gap-4 pt-4 border-t border-olive-600">
+                                <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=100&h=100&fit=crop&crop=face"
+                                     alt="Bojan i Irena"
+                                     class="w-14 h-14 rounded-full object-cover border-2 border-gold-400"
+                                     loading="lazy">
+                                <div>
+                                    <p class="font-heading font-bold">Bojan & Irena</p>
+                                    <p class="text-olive-200 text-sm">Vaši domaćini iz Da Nanga</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="o-putovanju" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal text-center mb-16">
+                <p class="text-olive-600 font-heading font-semibold tracking-wider text-sm mb-4">NAČIN NA KOJI PUTUJEMO</p>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-olive-800 mb-6">
+                    Luksuz koji ima dušu
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    Ovo nije tura gde jurite od spomenika do spomenika. Ovo je putovanje gde zaista živite Vijetnam.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Cards -->
+                <div class="reveal group bg-olive-50 p-8 rounded-3xl hover:bg-olive-600 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="w-14 h-14 bg-olive-200 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold-400 transition-colors">
+                        <svg class="w-7 h-7 text-olive-700 group-hover:text-olive-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-olive-800 mb-3 group-hover:text-white">Mala grupa, veliki doživljaj</h3>
+                    <p class="text-gray-600 group-hover:text-olive-100">Maksimalno 12 osoba. Dovoljno da se svi upoznamo, premalo da budemo "grupa turista".</p>
+                </div>
+
+                <div class="reveal delay-100 group bg-olive-50 p-8 rounded-3xl hover:bg-olive-600 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="w-14 h-14 bg-olive-200 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold-400 transition-colors">
+                        <svg class="w-7 h-7 text-olive-700 group-hover:text-olive-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-olive-800 mb-3 group-hover:text-white">5★ smeštaj sa karakterom</h3>
+                    <p class="text-gray-600 group-hover:text-olive-100">Boutique hoteli i resorti koje smo lično birali. Luksuz koji se uklapa u prirodu i lokalni duh.</p>
+                </div>
+
+                <div class="reveal delay-200 group bg-olive-50 p-8 rounded-3xl hover:bg-olive-600 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="w-14 h-14 bg-olive-200 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold-400 transition-colors">
+                        <svg class="w-7 h-7 text-olive-700 group-hover:text-olive-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-olive-800 mb-3 group-hover:text-white">Hrana koju lokalci jedu</h3>
+                    <p class="text-gray-600 group-hover:text-olive-100">Od street food-a na plastičnim stolicama do fine dining-a. Sva mesta su testirana i odobrena.</p>
+                </div>
+
+                <div class="reveal group bg-olive-50 p-8 rounded-3xl hover:bg-olive-600 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="w-14 h-14 bg-olive-200 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold-400 transition-colors">
+                        <svg class="w-7 h-7 text-olive-700 group-hover:text-olive-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-olive-800 mb-3 group-hover:text-white">Balans aktivnosti i odmora</h3>
+                    <p class="text-gray-600 group-hover:text-olive-100">Hiking, istraživanje, radionice — ali i slobodni dani za plažu, masaže i lični ritam.</p>
+                </div>
+
+                <div class="reveal delay-100 group bg-olive-50 p-8 rounded-3xl hover:bg-olive-600 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="w-14 h-14 bg-olive-200 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold-400 transition-colors">
+                        <svg class="w-7 h-7 text-olive-700 group-hover:text-olive-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-olive-800 mb-3 group-hover:text-white">Lokalni vodiči, ne turistički</h3>
+                    <p class="text-gray-600 group-hover:text-olive-100">Mi nismo klasični vodiči. Delimo mesto gde živimo sa ljudima koje želimo da upoznamo.</p>
+                </div>
+
+                <div class="reveal delay-200 group bg-olive-50 p-8 rounded-3xl hover:bg-olive-600 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="w-14 h-14 bg-olive-200 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold-400 transition-colors">
+                        <svg class="w-7 h-7 text-olive-700 group-hover:text-olive-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-olive-800 mb-3 group-hover:text-white">Iskustva koja se pamte</h3>
+                    <p class="text-gray-600 group-hover:text-olive-100">Izrada lampiona, kuvanje sa lokalcima, tai chi na Ha Long zalivu, kakao ceremonija na plaži.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="py-20 lg:py-28 bg-olive-800 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <img src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=2070"
+                 alt=""
+                 class="w-full h-full object-cover"
+                 loading="lazy">
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="reveal text-center mb-16">
+                <p class="text-gold-400 font-heading font-semibold tracking-wider text-sm mb-4">ZAŠTO BAŠ MI</p>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6">
+                    Nismo agencija. Mi smo vaši prijatelji u Vijetnamu.
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="reveal text-center">
+                    <div class="w-20 h-20 bg-gold-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl font-heading font-bold text-olive-900">5+</span>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-2">Godina u Vijetnamu</h3>
+                    <p class="text-olive-200">Ovo nije naš posao. Ovo je naš dom koji delimo sa vama.</p>
+                </div>
+
+                <div class="reveal delay-100 text-center">
+                    <div class="w-20 h-20 bg-gold-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl font-heading font-bold text-olive-900">47</span>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-2">Srećnih putnika</h3>
+                    <p class="text-olive-200">Svi bi ponovili. Mnogi su se vratili na naše druge ture.</p>
+                </div>
+
+                <div class="reveal delay-200 text-center">
+                    <div class="w-20 h-20 bg-gold-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl font-heading font-bold text-olive-900">12</span>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-2">Maksimum u grupi</h3>
+                    <p class="text-olive-200">Dovoljno malo da se svi upoznamo i povežemo.</p>
+                </div>
+
+                <div class="reveal delay-300 text-center">
+                    <div class="w-20 h-20 bg-gold-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl font-heading font-bold text-olive-900">24/7</span>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-2">Podrška na putu</h3>
+                    <p class="text-olive-200">S vama smo pre, tokom i posle putovanja. Za sve što vam zatreba.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 lg:py-28 bg-olive-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal text-center mb-16">
+                <p class="text-olive-600 font-heading font-semibold tracking-wider text-sm mb-4">UTISCI PUTNIKA</p>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-olive-800 mb-6">
+                    Šta kažu oni koji su bili sa nama
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="reveal bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex gap-1 mb-4">
+                        <span class="text-gold-400 text-xl">★★★★★</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic leading-relaxed">
+                        "Ovo nije bilo putovanje — ovo je bio životni doživljaj. Irena i Bojan su nas vodili na mesta koja nikada ne bismo pronašli sami. Osećala sam se kao da imam prijatelje u Vijetnamu."
+                    </p>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-100">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face"
+                             alt="Marija N."
+                             class="w-12 h-12 rounded-full object-cover"
+                             loading="lazy">
+                        <div>
+                            <p class="font-heading font-bold text-olive-800">Marija N.</p>
+                            <p class="text-gray-500 text-sm">Beograd, april 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="reveal delay-100 bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex gap-1 mb-4">
+                        <span class="text-gold-400 text-xl">★★★★★</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic leading-relaxed">
+                        "Putovao sam dosta, ali ovo je nešto posebno. Kombinacija luksuza i autentičnosti je savršena. Street food pa 5-zvezdični resort — sve ima smisla kada su vam vodiči lokalci."
+                    </p>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-100">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+                             alt="Stefan M."
+                             class="w-12 h-12 rounded-full object-cover"
+                             loading="lazy">
+                        <div>
+                            <p class="font-heading font-bold text-olive-800">Stefan M.</p>
+                            <p class="text-gray-500 text-sm">Zagreb, april 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="reveal delay-200 bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex gap-1 mb-4">
+                        <span class="text-gold-400 text-xl">★★★★★</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic leading-relaxed">
+                        "Bojala sam se daleke destinacije, ali sa Irenom i Bojanom sam se osećala potpuno sigurno. Svaki detalj je bio promišljen. Već planiram sledeće putovanje sa njima."
+                    </p>
+                    <div class="flex items-center gap-4 pt-4 border-t border-gray-100">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
+                             alt="Ana P."
+                             class="w-12 h-12 rounded-full object-cover"
+                             loading="lazy">
+                        <div>
+                            <p class="font-heading font-bold text-olive-800">Ana P.</p>
+                            <p class="text-gray-500 text-sm">Novi Sad, april 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Badge -->
+            <div class="reveal mt-12 text-center">
+                <a href="#" class="inline-flex items-center gap-2 text-olive-600 hover:text-olive-800 transition-colors">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.5 16.5c-1.5 1-3.4 1.5-5.5 1.5s-4-.5-5.5-1.5c-.4-.2-.4-.8 0-1 1.5-1 3.4-1.5 5.5-1.5s4 .5 5.5 1.5c.4.2.4.8 0 1zM9 10c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"/>
+                    </svg>
+                    Pogledajte sve recenzije na Google-u
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Itinerary Preview -->
+    <section id="itinerer" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal text-center mb-16">
+                <p class="text-olive-600 font-heading font-semibold tracking-wider text-sm mb-4">15 DANA AVANTURE</p>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-olive-800 mb-6">
+                    Vaša ruta kroz Vijetnam
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    Od haotičnog Hanoija, preko mističnih pirinčanih polja, do sunčanog Hoi Ana
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative">
+                <!-- Line -->
+                <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-olive-200"></div>
+
+                <!-- Day Items -->
+                <div class="space-y-12 lg:space-y-0">
+                    <!-- Day 1-3: Hanoi -->
+                    <div class="reveal lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                        <div class="lg:text-right lg:pr-16 mb-8 lg:mb-0">
+                            <span class="inline-block bg-olive-100 text-olive-700 px-4 py-1 rounded-full text-sm font-heading font-semibold mb-4">DAN 1-3</span>
+                            <h3 class="text-2xl font-heading font-bold text-olive-800 mb-3">Hanoi — Grad koji ne spava</h3>
+                            <p class="text-gray-600">Stari grad, ulična hrana, ceremonija čaja, večernje šetnje kroz vekove istorije. Prvi susret sa vijetnamskim haosom koji ima svoj ritam.</p>
+                        </div>
+                        <div class="relative lg:pl-16">
+                            <div class="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 bg-gold-400 rounded-full border-4 border-white shadow"></div>
+                            <img src="https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?q=80&w=800"
+                                 alt="Hanoi"
+                                 class="rounded-2xl shadow-lg w-full h-64 object-cover"
+                                 loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Day 4-6: Pu Luong & Tam Coc -->
+                    <div class="reveal lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                        <div class="order-2 lg:order-1 lg:pr-16">
+                            <div class="hidden lg:block absolute right-1/2 top-1/2 -translate-y-1/2 translate-x-1/2 w-4 h-4 bg-gold-400 rounded-full border-4 border-white shadow"></div>
+                            <img src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=800"
+                                 alt="Pu Luong"
+                                 class="rounded-2xl shadow-lg w-full h-64 object-cover"
+                                 loading="lazy">
+                        </div>
+                        <div class="order-1 lg:order-2 lg:pl-16 mb-8 lg:mb-0">
+                            <span class="inline-block bg-olive-100 text-olive-700 px-4 py-1 rounded-full text-sm font-heading font-semibold mb-4">DAN 4-8</span>
+                            <h3 class="text-2xl font-heading font-bold text-olive-800 mb-3">Pu Luong & Tam Coc — Priroda od koje zastaje dah</h3>
+                            <p class="text-gray-600">Pirinčane terase, planinski resorti, vožnja čamcem kroz pećine. Sela etničkih manjina daleko od turističkih ruta.</p>
+                        </div>
+                    </div>
+
+                    <!-- Day 7-8: Ha Long Bay -->
+                    <div class="reveal lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                        <div class="lg:text-right lg:pr-16 mb-8 lg:mb-0">
+                            <span class="inline-block bg-olive-100 text-olive-700 px-4 py-1 rounded-full text-sm font-heading font-semibold mb-4">DAN 9-10</span>
+                            <h3 class="text-2xl font-heading font-bold text-olive-800 mb-3">Ha Long zaliv — Noć na vodi</h3>
+                            <p class="text-gray-600">Luksuzni kruzer, kajak kroz emeraldne vode, tai chi u svitanje, večera pod zvezdama. Možda najlepši zaliv na svetu.</p>
+                        </div>
+                        <div class="relative lg:pl-16">
+                            <div class="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 bg-gold-400 rounded-full border-4 border-white shadow"></div>
+                            <img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?q=80&w=800"
+                                 alt="Ha Long Bay"
+                                 class="rounded-2xl shadow-lg w-full h-64 object-cover"
+                                 loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Day 9-15: Central Vietnam -->
+                    <div class="reveal lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                        <div class="order-2 lg:order-1 lg:pr-16">
+                            <img src="https://images.unsplash.com/photo-1536697246787-1f7ae568d89a?q=80&w=800"
+                                 alt="Hoi An"
+                                 class="rounded-2xl shadow-lg w-full h-64 object-cover"
+                                 loading="lazy">
+                        </div>
+                        <div class="order-1 lg:order-2 lg:pl-16 mb-8 lg:mb-0">
+                            <span class="inline-block bg-olive-100 text-olive-700 px-4 py-1 rounded-full text-sm font-heading font-semibold mb-4">DAN 11-15</span>
+                            <h3 class="text-2xl font-heading font-bold text-olive-800 mb-3">Da Nang & Hoi An — Gde završava avantura</h3>
+                            <p class="text-gray-600">Plaže, Dragon Bridge, Ao Dai fotošuting, izrada lampiona, slobodni dani za istraživanje. Savršen završetak putovanja.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal text-center mt-16">
+                <a href="#kontakt" class="inline-flex items-center gap-2 bg-olive-600 text-white px-8 py-4 rounded-full font-heading font-bold hover:bg-olive-700 transition-all hover:scale-105">
+                    Pogledaj detaljan itinerer
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 lg:py-28 bg-olive-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal text-center mb-16">
+                <p class="text-olive-600 font-heading font-semibold tracking-wider text-sm mb-4">IMATE PITANJA?</p>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-olive-800 mb-6">
+                    Pitanja koja svi postavljaju
+                </h2>
+            </div>
+
+            <div class="reveal space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left">
+                        <span class="font-heading font-bold text-olive-800 text-lg pr-4">Da li je Vijetnam siguran za turiste?</span>
+                        <span class="faq-icon text-olive-600 text-2xl font-light transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-600">Vijetnam je jedna od najsigurnijih zemalja u jugoistočnoj Aziji. Mi živimo ovde 5 godina i nikada nismo imali neprijatno iskustvo. Naravno, kao i svuda, treba biti oprezan sa svojim stvarima, ali generalno — osećaćete se sigurnije nego u većini evropskih gradova. Plus, vi ste sa nama koji znamo sve zamke i kako ih izbeći.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left">
+                        <span class="font-heading font-bold text-olive-800 text-lg pr-4">Koliko je fizički zahtevno putovanje?</span>
+                        <span class="faq-icon text-olive-600 text-2xl font-light transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-600">Putovanje je prilagođeno normalnoj kondiciji. Hiking kroz pirinčana polja je umeren (2-3 sata laganog hoda). Svaki dan ima balans aktivnosti i odmora. Ako vam nešto ne odgovara — preskočite i opustite se u resortu. Ovo nije maraton, ovo je uživanje.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left">
+                        <span class="font-heading font-bold text-olive-800 text-lg pr-4">Šta ako ne volim ljutu hranu?</span>
+                        <span class="faq-icon text-olive-600 text-2xl font-light transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-600">Vijetnamska kuhinja zapravo nije posebno ljuta (to je više tajlandska). Većina jela je aromatična i sveža, sa puno začina ali ne ljutih. Plus, mi poznajemo restorane i uvek možemo naručiti blažu verziju. Niko neće ostati gladan, obećavamo!</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left">
+                        <span class="font-heading font-bold text-olive-800 text-lg pr-4">Kako funkcioniše plaćanje i depozit?</span>
+                        <span class="faq-icon text-olive-600 text-2xl font-light transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-600">Rezervacija se potvrđuje depozitom od 500€. Ostatak se plaća 60 dana pre polaska. Plaćanje je moguće u ratama, bankovnim transferom ili PayPal-om. U slučaju otkazivanja do 60 dana pre puta, vraćamo kompletan depozit.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left">
+                        <span class="font-heading font-bold text-olive-800 text-lg pr-4">Da li mogu da produžim boravak u Vijetnamu?</span>
+                        <span class="faq-icon text-olive-600 text-2xl font-light transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-600">Naravno! Mnogi naši putnici ostaju duže. Pomažemo sa organizacijom — bilo da želite još vremena u Da Nangu, ili da samostalno istražite jug Vijetnama. Dajemo vam sve preporuke, kontakte i savete za nastavak avanture.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objections Section -->
+    <section class="py-20 lg:py-28 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <img src="https://images.unsplash.com/photo-1573790387438-4da905039392?q=80&w=800"
+                         alt="Vietnam Temple"
+                         class="rounded-3xl shadow-2xl w-full"
+                         loading="lazy">
+                </div>
+
+                <div class="reveal delay-200">
+                    <p class="text-olive-600 font-heading font-semibold tracking-wider text-sm mb-4">BUDITE ISKRENI SA SOBOM</p>
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-olive-800 mb-8">
+                        Ovo putovanje nije za svakoga
+                    </h2>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                </svg>
+                            </div>
+                            <p class="text-gray-600">Ako tražite klasičnu turu sa zastavicama i strogim rasporedom u minutu — nismo mi pravi izbor.</p>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                </svg>
+                            </div>
+                            <p class="text-gray-600">Ako vam je prioritet da obiđete što više lokacija za što manje para — ovo nije budget tura.</p>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                </svg>
+                            </div>
+                            <p class="text-gray-600">Ako očekujete samo luksuz bez ikakve avanture — mi kombinujemo oba sveta.</p>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                </svg>
+                            </div>
+                            <p class="text-gray-600">Ako niste spremni na zajednički ritam i druženje sa grupom — ovo je grupno putovanje.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 p-6 bg-olive-50 rounded-2xl">
+                        <p class="text-olive-700 font-medium">
+                            <span class="text-olive-800 font-bold">Ali ako...</span> želite da zaista doživite Vijetnam, upoznate ljude koji tamo žive, jedete gde jedu lokalci i odete kući sa pričama koje se ne zaboravljaju — onda ste na pravom mestu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="cene" class="py-20 lg:py-28 bg-olive-800 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal text-center mb-16">
+                <p class="text-gold-400 font-heading font-semibold tracking-wider text-sm mb-4">INVESTICIJA U ISKUSTVO</p>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6">
+                    Cena i šta je uključeno
+                </h2>
+                <div class="flex items-center justify-center gap-3">
+                    <span class="text-6xl md:text-7xl font-heading font-bold">1890</span>
+                    <span class="text-2xl text-gold-400">EUR</span>
+                </div>
+                <p class="text-olive-200 mt-4">po osobi, smeštaj u dvokrevetnoj sobi</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Included -->
+                <div class="reveal bg-white text-olive-900 rounded-3xl p-8 shadow-2xl">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-olive-100 rounded-xl flex items-center justify-center">
+                            <svg class="w-6 h-6 text-olive-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold">Uključeno u cenu</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-olive-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Smeštaj u 5★ hotelima i boutique resortima (14 noći)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-olive-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Doručak svakog dana</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-olive-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Lokalni letovi (Hanoi → Da Nang → Hanoi)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-olive-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Sav transport luksuznim kombijima</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-olive-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Krstarenje Ha Long zalivom (2 dana/1 noć) sa svim obrocima</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-olive-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Sve aktivnosti i izleti prema programu</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-olive-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Profesionalno vođenje i fotografisanje</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-olive-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">Radionice (lampioni, Ao Dai, cooking class)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Not Included -->
+                <div class="reveal delay-100 bg-olive-700 rounded-3xl p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-olive-600 rounded-xl flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-white">Nije uključeno</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-gold-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                            </svg>
+                            <span class="text-olive-100">Međunarodni letovi do/iz Vijetnama</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-gold-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                            </svg>
+                            <span class="text-olive-100">Putno zdravstveno osiguranje</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-gold-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                            </svg>
+                            <span class="text-olive-100">Viza za Vijetnam (~25€ online)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-gold-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                            </svg>
+                            <span class="text-olive-100">Obroci van programa (~10-15€/dan)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-gold-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                            </svg>
+                            <span class="text-olive-100">Lični troškovi i napojnice</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-gold-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                            </svg>
+                            <span class="text-olive-100">Doplata za jednokrevetnu sobu (+400€)</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-8 p-4 bg-olive-600/50 rounded-xl">
+                        <p class="text-sm text-olive-100">
+                            <span class="text-gold-400 font-bold">💡 Okvirne cene letova:</span><br>
+                            Budimpešta → Hanoi: 550-600€<br>
+                            Beograd → Hanoi: ~800€<br>
+                            Zagreb → Hanoi: ~900€
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/CTA Section -->
+    <section id="kontakt" class="py-20 lg:py-28 bg-olive-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="reveal">
+                <p class="text-olive-600 font-heading font-semibold tracking-wider text-sm mb-4">OSTALO JE SAMO 12 MESTA</p>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-olive-800 mb-6">
+                    Spremni za avanturu života?
+                </h2>
+                <p class="text-gray-600 text-lg mb-10 max-w-2xl mx-auto">
+                    Ako ste stigli do ovde, verovatno već osećate da ovo nije obična tura.
+                    Javite nam se, odgovorićemo na sva pitanja i pomoći vam da rezervišete svoje mesto.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                    <a href="mailto:hello@queenofcompass.com" class="group bg-olive-600 text-white px-10 py-4 rounded-full font-heading font-bold text-lg hover:bg-olive-700 transition-all hover:scale-105 flex items-center gap-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        Pošalji upit
+                    </a>
+                    <a href="https://instagram.com/queenofcompass" target="_blank" class="text-olive-700 border-2 border-olive-300 px-10 py-4 rounded-full font-heading font-semibold hover:bg-olive-100 transition-all flex items-center gap-3">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        @queenofcompass
+                    </a>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="flex flex-wrap items-center justify-center gap-8 text-olive-600">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                        <span class="text-sm">Sigurno plaćanje</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                        </svg>
+                        <span class="text-sm">Plaćanje na rate</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                        <span class="text-sm">47 srećnih putnika</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-olive-900 text-white py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h3 class="font-heading font-bold text-xl mb-4">Queen of Compass</h3>
+                    <p class="text-olive-300 mb-6">Autentična putovanja kroz Aziju sa ljudima koji tamo žive.</p>
+                    <div class="flex gap-4">
+                        <a href="https://instagram.com/queenofcompass" target="_blank" class="w-10 h-10 bg-olive-800 rounded-full flex items-center justify-center hover:bg-gold-400 hover:text-olive-900 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com/queenofcompass" target="_blank" class="w-10 h-10 bg-olive-800 rounded-full flex items-center justify-center hover:bg-gold-400 hover:text-olive-900 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold mb-4">Brzi linkovi</h4>
+                    <ul class="space-y-2 text-olive-300">
+                        <li><a href="#o-putovanju" class="hover:text-gold-400 transition-colors">O putovanju</a></li>
+                        <li><a href="#itinerer" class="hover:text-gold-400 transition-colors">Itinerer</a></li>
+                        <li><a href="#cene" class="hover:text-gold-400 transition-colors">Cene</a></li>
+                        <li><a href="#faq" class="hover:text-gold-400 transition-colors">Česta pitanja</a></li>
+                        <li><a href="#kontakt" class="hover:text-gold-400 transition-colors">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold mb-4">Kontakt</h4>
+                    <ul class="space-y-2 text-olive-300">
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            hello@queenofcompass.com
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            Da Nang, Vietnam
+                        </li>
+                    </ul>
+                    <p class="text-olive-400 text-sm mt-6">Sunčani pozdravi iz Vijetnama! ☀️</p>
+                </div>
+            </div>
+
+            <div class="border-t border-olive-800 pt-8 text-center text-olive-400 text-sm">
+                <p>© 2026 Queen of Compass. Sva prava zadržana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4">
+        <button id="lightbox-close" class="absolute top-4 right-4 text-white text-4xl hover:text-gold-400">&times;</button>
+        <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full rounded-lg">
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-olive-900/95', 'backdrop-blur-lg', 'shadow-lg');
+            } else {
+                navbar.classList.remove('bg-olive-900/95', 'backdrop-blur-lg', 'shadow-lg');
+            }
+        });
+
+        // Scroll reveal
+        const reveals = document.querySelectorAll('.reveal');
+
+        function revealOnScroll() {
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                const revealPoint = 150;
+
+                if (elementTop < windowHeight - revealPoint) {
+                    el.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+
+        // FAQ Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const item = toggle.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+                // Open clicked (if wasn't active)
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        document.querySelectorAll('[data-lightbox]').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
