@@ -75,7 +75,6 @@ export default function Itinerary() {
                           src={item.image}
                           alt={item.title}
                           className="w-full h-64 lg:h-80 object-cover"
-                          style={{ objectPosition: item.imagePosition || 'center' }}
                           loading="lazy"
                         />
                       </div>

@@ -117,7 +117,6 @@ export const itineraryContent = [
     location: "Tam Coc",
     description: "Dan istraživanja Tam Coc prirodnog rezervata biciklima kroz pirinčana polja, male staze i sela. Poseta hramovima u pecinama i penjanje na Mua Cave za panoramski pogled. Popodne jedinstvena vožnja čamcem kroz reke i kanale.",
     image: "/images/14-april.jpg",
-    imagePosition: "bottom",
   },
   {
     day: "15. APRIL",
@@ -132,7 +131,6 @@ export const itineraryContent = [
     location: "Ha Long Bay",
     description: "Rani polazak ka Ha Long zaliv. Ukrcavanje na luksuzni kruzer sa privatnim sobama okrenutim ka zalivu. Dan na vodi: kajak, obilazak pećina, cooking class, istraživanje Ha Long zaliva. Večernji ribolov i zajednička večera. Noćenje na brodu.",
     image: "/images/16-april.jpg",
-    imagePosition: "top",
     section: "SELIMO SE U CENTRALNI VIJETNAM",
   },
   {
@@ -155,7 +153,6 @@ export const itineraryContent = [
     location: "Da Nang",
     description: "Jutarnja kakao ceremonija i kratka meditacija na plaži. Dan bez plana: sunce, more, masaže, sportovi na vodi ili kokteli u beach baru. Dan za potpuni reset.",
     image: "/images/19-april.jpg",
-    imagePosition: "top",
   },
   {
     day: "20. APRIL",
