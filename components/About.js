@@ -86,6 +86,7 @@ export default function About() {
                     src={galleryImages[0]}
                     alt="Vietnam"
                     className="w-full h-64 object-cover"
+                    style={{ objectPosition: 'bottom' }}
                     loading="lazy"
                   />
                 </div>
