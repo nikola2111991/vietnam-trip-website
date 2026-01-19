@@ -33,7 +33,7 @@ export default function Navigation() {
               src="/images/logo.webp"
               alt="Queen of Compass"
               className="h-12 w-auto transition-all duration-300"
-              style={isScrolled ? { filter: 'invert(0%) sepia(84%) saturate(7437%) hue-rotate(203deg) brightness(110%) contrast(114%)' } : {}}
+              style={isScrolled ? { filter: 'invert(17%) sepia(10%) saturate(2109%) hue-rotate(44deg) brightness(47%) contrast(80%)' } : {}}
             />
           </a>
 
