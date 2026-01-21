@@ -18,18 +18,34 @@ export default function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
+  const [error, setError] = useState(null)
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError(null)
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
 
-    // In production, you would send this to your backend or email service
-    console.log('Form submitted:', formData)
+      const data = await response.json()
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+      if (!response.ok) {
+        throw new Error(data.error || 'Greška pri slanju')
+      }
+
+      setIsSubmitted(true)
+    } catch (err) {
+      setError(err.message || 'Greška pri slanju. Molimo pokušajte ponovo.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -122,6 +138,7 @@ export default function ContactForm() {
                 <button
                   onClick={() => {
                     setIsSubmitted(false)
+                    setError(null)
                     setFormData({ name: '', email: '', phone: '', message: '', travelers: '1' })
                   }}
                   className="text-olive-600 font-semibold hover:text-olive-700 transition-colors"
@@ -215,6 +232,13 @@ export default function ContactForm() {
                       placeholder="Recite nam nešto o sebi i šta vas zanima..."
                     />
                   </div>
+
+                  {/* Error Message */}
+                  {error && (
+                    <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl">
+                      {error}
+                    </div>
+                  )}
 
                   {/* Submit Button */}
                   <button

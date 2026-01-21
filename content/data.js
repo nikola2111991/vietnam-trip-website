@@ -393,4 +393,24 @@ export const faqContent = [
     question: "Zašto je ovo putovanje drugačije?",
     answer: "Zato što nije zasnovano na brzom obilasku destinacija, već na stvarnom doživljaju zemlje, ljudi i ritma života. Ovo je iskustvo koje se ne meri brojem fotografija, već dubinom utisaka koji ostaju.",
   },
+  {
+    question: "Koji je nivo fizičke spreme potreban za ovo putovanje?",
+    answer: "Putovanje je prilagođeno svim nivoima fizičke spreme. Hiking aktivnosti su umerene i pristupačne, sa mnogo pauza i vremena za uživanje u pejzažu. Uvek postoji mogućnost prilagođavanja tempa prema grupi.",
+  },
+  {
+    question: "Da li mi je potrebna viza za Vijetnam?",
+    answer: "Državljani Srbije mogu da dobiju online vizu u roku od 3-5 radna dana. Cena vize iznosi 25$ i važi do 90 dana. Za državljane drugih zemalja, preporučujemo da proverite aktuelne uslove. Rado ćemo vam pomoći sa svim informacijama.",
+  },
+  {
+    question: "Koliko ljudi će biti u grupi?",
+    answer: "Putujemo u maloj, pažljivo biranoj grupi do maksimalno 15 osoba. Ovo omogućava personalizovano iskustvo i fleksibilnost u programu.",
+  },
+  {
+    question: "Da li je hrana uključena?",
+    answer: "Doručak je uključen u svim smeštajima. Na krstarenju Ha Long zalivom svi obroci su uključeni. Ostali obroci nisu uključeni, što vam daje slobodu da istražite lokalnu kuhinju po sopstvenom izboru.",
+  },
+  {
+    question: "Mogu li putovati sam/sama?",
+    answer: "Naravno! Mnogi naši putnici dolaze sami i to je odlična prilika za nova poznanstva. Postoji mogućnost deljenja sobe sa drugim putnikom istog pola, ili doplata za jednokrevetnu sobu.",
+  },
 ];
