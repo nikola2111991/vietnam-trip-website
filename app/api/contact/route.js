@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 
 export async function POST(request) {
   try {
@@ -12,34 +12,19 @@ export async function POST(request) {
       )
     }
 
-    // Create transporter using environment variables
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: process.env.SMTP_SECURE === 'true',
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    })
+    // Check if API key is configured
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not configured')
+      return Response.json(
+        { error: 'Email servis nije konfigurisan. Kontaktirajte nas direktno na hello@queenofcompass.com' },
+        { status: 500 }
+      )
+    }
 
-    // Email content
-    const emailContent = `
-Nova poruka sa sajta Queen of Compass
+    const resend = new Resend(process.env.RESEND_API_KEY)
 
-Ime i prezime: ${name}
-Email: ${email}
-Telefon: ${phone || 'Nije naveden'}
-Broj putnika: ${travelers}
-
-Poruka:
-${message || 'Bez poruke'}
-
----
-Ova poruka je automatski poslata sa vietnam-trip-website.vercel.app
-`
-
-    const htmlContent = `
+    // Email content for Queen of Compass
+    const adminHtmlContent = `
 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
   <h2 style="color: #4a5240;">Nova poruka sa sajta Queen of Compass</h2>
 
@@ -74,42 +59,7 @@ Ova poruka je automatski poslata sa vietnam-trip-website.vercel.app
 </div>
 `
 
-    // Send email to Queen of Compass (hello@queenofcompass.com)
-    await transporter.sendMail({
-      from: process.env.SMTP_FROM || 'noreply@queenofcompass.com',
-      to: 'hello@queenofcompass.com',
-      subject: `Nova rezervacija - ${name}`,
-      text: emailContent,
-      html: htmlContent,
-      replyTo: email,
-    })
-
-    // Send confirmation email to customer
-    const customerEmailContent = `
-Poštovani/a ${name},
-
-Hvala vam što ste nas kontaktirali!
-
-Primili smo vašu poruku i javićemo vam se u roku od 24 sata sa svim detaljima o putovanju i uslovima rezervacije.
-
-Vaši podaci:
-- Email: ${email}
-- Telefon: ${phone || 'Nije naveden'}
-- Broj putnika: ${travelers}
-
-Vaša poruka:
-${message || 'Bez poruke'}
-
----
-
-Srdačan pozdrav,
-Bojan & Irena
-Queen of Compass
-
-Da Nang, Vijetnam
-Instagram: @queen.of.compass
-`
-
+    // Confirmation email for customer
     const customerHtmlContent = `
 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
   <div style="text-align: center; padding: 20px 0;">
@@ -151,13 +101,35 @@ Instagram: @queen.of.compass
 </div>
 `
 
-    await transporter.sendMail({
-      from: process.env.SMTP_FROM || 'noreply@queenofcompass.com',
-      to: email,
+    // Send email to Queen of Compass (hello@queenofcompass.com)
+    const { error: adminError } = await resend.emails.send({
+      from: 'Queen of Compass <onboarding@resend.dev>',
+      to: ['hello@queenofcompass.com'],
+      subject: `Nova rezervacija - ${name}`,
+      html: adminHtmlContent,
+      replyTo: email,
+    })
+
+    if (adminError) {
+      console.error('Admin email error:', adminError)
+      return Response.json(
+        { error: 'Greška pri slanju emaila. Molimo pokušajte ponovo.' },
+        { status: 500 }
+      )
+    }
+
+    // Send confirmation email to customer
+    const { error: customerError } = await resend.emails.send({
+      from: 'Queen of Compass <onboarding@resend.dev>',
+      to: [email],
       subject: 'Hvala na interesovanju - Queen of Compass',
-      text: customerEmailContent,
       html: customerHtmlContent,
     })
+
+    if (customerError) {
+      console.error('Customer email error:', customerError)
+      // Don't fail if only customer email fails - admin already received it
+    }
 
     return Response.json({ success: true, message: 'Email uspešno poslat' })
   } catch (error) {
