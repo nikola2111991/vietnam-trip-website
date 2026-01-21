@@ -173,7 +173,7 @@ export default function Navigation() {
                 className="absolute bottom-12 flex items-center gap-6"
               >
                 <a
-                  href="https://instagram.com/queenofcompass"
+                  href="https://instagram.com/queen.of.compass"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-olive-400 hover:text-olive-600 transition-colors"

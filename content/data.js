@@ -326,24 +326,12 @@ export const faqContent = [
     answer: "Putovanje je prilagođeno svim nivoima fizičke spreme. Hiking aktivnosti su umerene i pristupačne, sa mnogo pauza i vremena za uživanje u pejzažu. Uvek postoji mogućnost prilagođavanja tempa prema grupi.",
   },
   {
-    question: "Šta je uključeno u cenu od 1890 EUR?",
-    answer: "Cena uključuje sav smeštaj u luksuznim hotelima i resortima, lokalne letove (Hanoi-Da Nang-Hanoi), sav kopneni transport, organizovane izlete i aktivnosti, krstarenje Ha Long zalivom sa svim obrocima, profesionalno vođenje ture i fotografisanje.",
-  },
-  {
-    question: "Da li trebam vizu za Vijetnam?",
-    answer: "Državljani Srbije mogu da uđu u Vijetnam bez vize do 45 dana. Za državljane drugih zemalja, preporučujemo da proverite aktuelne uslove. Rado ćemo vam pomoći sa svim informacijama.",
-  },
-  {
-    question: "Kako funkcioniše rezervacija i uplata?",
-    answer: "Nakon što nas kontaktirate, šaljemo vam detaljne informacije i uslove rezervacije. Rezervacija se potvrđuje uplatom depozita od 30%, a ostatak se uplaćuje najkasnije 30 dana pre polaska.",
+    question: "Da li mi je potrebna viza za Vijetnam?",
+    answer: "Državljani Srbije mogu da dobiju online vizu u roku od 3-5 radna dana. Cena vize iznosi 25$ i važi do 90 dana. Za državljane drugih zemalja, preporučujemo da proverite aktuelne uslove. Rado ćemo vam pomoći sa svim informacijama.",
   },
   {
     question: "Koliko ljudi će biti u grupi?",
-    answer: "Putujemo u maloj, pažljivo biranoj grupi do maksimalno 12 osoba. Ovo omogućava personalizovano iskustvo i fleksibilnost u programu.",
-  },
-  {
-    question: "Šta ako moram da otkažem putovanje?",
-    answer: "U zavisnosti od vremena otkaza, primenjuju se različiti uslovi. Do 60 dana pre polaska vraćamo 80% uplaćenog iznosa. Preporučujemo putno osiguranje koje pokriva otkaz putovanja.",
+    answer: "Putujemo u maloj, pažljivo biranoj grupi do maksimalno 15 osoba. Ovo omogućava personalizovano iskustvo i fleksibilnost u programu.",
   },
   {
     question: "Da li je hrana uključena?",

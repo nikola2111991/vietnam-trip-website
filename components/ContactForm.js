@@ -93,8 +93,8 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <p className="text-olive-300 text-sm">Instagram</p>
-                  <a href="https://instagram.com/queenofcompass" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold-400 transition-colors">
-                    @queenofcompass
+                  <a href="https://instagram.com/queen.of.compass" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold-400 transition-colors">
+                    @queen.of.compass
                   </a>
                 </div>
               </div>

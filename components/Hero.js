@@ -1,58 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { heroContent } from '@/content/data'
-
-function CountdownTimer({ targetDate }) {
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
-
-  useEffect(() => {
-    const calculateTimeLeft = () => {
-      const difference = new Date(targetDate) - new Date()
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
-        })
-      }
-    }
-
-    calculateTimeLeft()
-    const timer = setInterval(calculateTimeLeft, 1000)
-    return () => clearInterval(timer)
-  }, [targetDate])
-
-  const timeUnits = [
-    { value: timeLeft.days, label: 'Dana' },
-    { value: timeLeft.hours, label: 'Sati' },
-    { value: timeLeft.minutes, label: 'Minuta' },
-    { value: timeLeft.seconds, label: 'Sekundi' },
-  ]
-
-  return (
-    <div className="flex items-center justify-center gap-3 sm:gap-4">
-      {timeUnits.map((unit, index) => (
-        <motion.div
-          key={unit.label}
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.8 + index * 0.1 }}
-          className="text-center"
-        >
-          <div className="bg-white/10 backdrop-blur-md rounded-xl px-3 py-2 sm:px-5 sm:py-3 border border-white/20">
-            <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tabular-nums">
-              {String(unit.value).padStart(2, '0')}
-            </span>
-          </div>
-          <span className="text-xs sm:text-sm text-white/70 mt-2 block">{unit.label}</span>
-        </motion.div>
-      ))}
-    </div>
-  )
-}
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -139,12 +88,6 @@ export default function Hero() {
               {heroContent.dates}
             </p>
             <div className="h-px w-16 bg-white/40" />
-          </motion.div>
-
-          {/* Countdown Timer */}
-          <motion.div variants={itemVariants} className="mb-10">
-            <p className="text-white/60 text-sm mb-4 tracking-wider uppercase">Do polaska ostalo</p>
-            <CountdownTimer targetDate="2026-04-08T00:00:00" />
           </motion.div>
 
           {/* CTA Buttons */}
