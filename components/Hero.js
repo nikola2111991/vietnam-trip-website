@@ -48,7 +48,9 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="#kontakt"
+              href="https://www.instagram.com/queen.of.compass/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-10 py-4 bg-olive-600 text-white font-semibold rounded-full shadow-2xl hover:bg-olive-700 hover:shadow-olive-600/25 transition-all duration-300 hover:scale-105"
             >
               {heroContent.cta}

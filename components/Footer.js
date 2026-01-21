@@ -44,7 +44,9 @@ export default function Footer() {
               </div>
 
               <a
-                href="#kontakt"
+                href="https://www.instagram.com/queen.of.compass/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-10 py-4 bg-gold-400 text-olive-900 font-bold rounded-full shadow-2xl hover:bg-gold-300 transition-all duration-300 hover:scale-105"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

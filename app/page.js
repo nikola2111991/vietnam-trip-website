@@ -6,7 +6,6 @@ import Itinerary from '@/components/Itinerary'
 import Gallery from '@/components/Gallery'
 import Pricing from '@/components/Pricing'
 import FAQ from '@/components/FAQ'
-import ContactForm from '@/components/ContactForm'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -20,7 +19,6 @@ export default function Home() {
       <Gallery />
       <Pricing />
       <FAQ />
-      <ContactForm />
       <Footer />
     </main>
   )

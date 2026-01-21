@@ -99,7 +99,9 @@ export default function FAQ() {
             Nemate odgovor na svoje pitanje?
           </p>
           <a
-            href="#kontakt"
+            href="https://www.instagram.com/queen.of.compass/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-olive-600 font-semibold hover:text-olive-700 transition-colors"
           >
             <span>Kontaktirajte nas direktno</span>
