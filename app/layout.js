@@ -1,8 +1,9 @@
 import './globals.css'
 
 export const metadata = {
+  metadataBase: new URL('https://vietnam-trip-website.vercel.app'),
   title: 'Autentični Vijetnam | Luksuzno Putovanje April 2026 | Queen of Compass',
-  description: '15-dnevno luksuzno autentično putovanje kroz severni i centralni Vijetnam. Hanoi, Pu Luong, Ha Long zaliv, Da Nang, Hoi An. Organizuju Irena i Bojan koji žive u Vijetnamu.',
+  description: 'Tura autentičnog putovanja u Vijetnam. 15-dnevno luksuzno putovanje kroz severni i centralni Vijetnam sa Irenom i Bojanom.',
   keywords: 'vijetnam putovanje, vietnam travel, luksuzno putovanje, hanoi, ha long bay, hoi an, da nang, pu luong, autentično putovanje, queen of compass',
   authors: [{ name: 'Queen of Compass' }],
   icons: {
@@ -10,13 +11,15 @@ export const metadata = {
     apple: '/favicon.svg',
   },
   openGraph: {
-    title: 'Autentični Vijetnam | April 2026',
-    description: '15-dnevno luksuzno autentično putovanje kroz Vijetnam sa Irenom i Bojanom',
+    title: 'Autentični Vijetnam | Queen of Compass',
+    description: 'Tura autentičnog putovanja u Vijetnam. 15-dnevno luksuzno putovanje kroz severni i centralni Vijetnam sa Irenom i Bojanom.',
     type: 'website',
     locale: 'sr_RS',
+    url: 'https://vietnam-trip-website.vercel.app',
+    siteName: 'Queen of Compass',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/images/hero.webp',
         width: 1200,
         height: 630,
         alt: 'Autentični Vijetnam - Queen of Compass',
@@ -25,8 +28,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Autentični Vijetnam | April 2026',
-    description: '15-dnevno luksuzno autentično putovanje kroz Vijetnam',
+    title: 'Autentični Vijetnam | Queen of Compass',
+    description: 'Tura autentičnog putovanja u Vijetnam. 15-dnevno luksuzno putovanje kroz severni i centralni Vijetnam.',
+    images: ['/images/hero.webp'],
   },
   robots: {
     index: true,

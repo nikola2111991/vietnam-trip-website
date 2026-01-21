@@ -322,23 +322,75 @@ export const galleryContent = [
 // FAQ Content
 export const faqContent = [
   {
-    question: "Koji je nivo fizičke spreme potreban za ovo putovanje?",
-    answer: "Putovanje je prilagođeno svim nivoima fizičke spreme. Hiking aktivnosti su umerene i pristupačne, sa mnogo pauza i vremena za uživanje u pejzažu. Uvek postoji mogućnost prilagođavanja tempa prema grupi.",
+    question: "Da li je Vijetnam kulturološki 'šok' za evropske putnike?",
+    answer: "Za većinu ljudi jeste drugačiji, ali ne na neprijatan način. Gradovi su živi i bučni, sela mirna i spora. Taj kontrast je deo čari zemlje. Nakon nekoliko dana, ritam Vijetnama postaje prirodan i često iznenađujuće umirujući.",
   },
   {
-    question: "Da li mi je potrebna viza za Vijetnam?",
-    answer: "Državljani Srbije mogu da dobiju online vizu u roku od 3-5 radna dana. Cena vize iznosi 25$ i važi do 90 dana. Za državljane drugih zemalja, preporučujemo da proverite aktuelne uslove. Rado ćemo vam pomoći sa svim informacijama.",
+    question: "Kako se lokalni ljudi odnose prema strancima?",
+    answer: "Vijetnamci su srdačni, radoznali i gostoljubivi. Osmijeh i osnovno poštovanje otvaraju gotovo sva vrata. Stranci se uglavnom doživljavaju kao gosti, ne kao smetnja.",
   },
   {
-    question: "Koliko ljudi će biti u grupi?",
-    answer: "Putujemo u maloj, pažljivo biranoj grupi do maksimalno 15 osoba. Ovo omogućava personalizovano iskustvo i fleksibilnost u programu.",
+    question: "Da li postoji jezička barijera?",
+    answer: "U većim gradovima i turističkim zonama osnovni engleski je prisutan. U manjim mestima komunikacija se često svodi na gestove, osmeh i strpljenje, što većina putnika doživi kao deo iskustva, a ne kao problem.",
   },
   {
-    question: "Da li je hrana uključena?",
-    answer: "Doručak je uključen u svim smeštajima. Na krstarenju Ha Long zalivom svi obroci su uključeni. Ostali obroci nisu uključeni, što vam daje slobodu da istražite lokalnu kuhinju po sopstvenom izboru.",
+    question: "Da li je Vijetnam siguran za kretanje i šetnje?",
+    answer: "Da. Kriminal prema turistima je nizak. Najveći izazov može biti saobraćaj, koji deluje haotično, ali funkcioniše po nepisanim pravilima na koja se brzo navikne.",
   },
   {
-    question: "Mogu li putovati sam/sama?",
-    answer: "Naravno! Mnogi naši putnici dolaze sami i to je odlična prilika za nova poznanstva. Postoji mogućnost deljenja sobe sa drugim putnikom istog pola, ili doplata za jednokrevetnu sobu.",
+    question: "Da li je putovanje bezbedno uopšteno?",
+    answer: "Vijetnam se smatra bezbednom destinacijom za putovanja. Uz lokalnu podršku, proverene partnere i iskustvo života na terenu, kretanje i boravak su organizovani sa posebnom pažnjom.",
+  },
+  {
+    question: "Da li je bezbedno jesti uličnu hranu?",
+    answer: "Da, naročito ako se jede na mestima gde jedu i lokalci. Brza rotacija hrane i svežina su ključni faktori. Ulična hrana je deo kulture i svakodnevnog života, ne kompromis.",
+  },
+  {
+    question: "Šta ako imam posebne prehrambene potrebe?",
+    answer: "Važno je da to unapred naglasite. U okviru lokalnih mogućnosti uvek se trudimo da pronađemo odgovarajuće opcije.",
+  },
+  {
+    question: "Da li je pristojno cenkati se?",
+    answer: "Da, ali uz meru i osmeh. Cenkanje je deo lokalne kulture i svakodnevne komunikacije. Kada se radi sa poštovanjem, često se završi uz obostrani osmeh.",
+  },
+  {
+    question: "Kako se lokalci odnose prema fotografisanju?",
+    answer: "U većini situacija su otvoreni i radoznali. Ipak, posebno u ruralnim sredinama, uvek je lepo pitati pogledom ili jednostavnim gestom pre fotografisanja.",
+  },
+  {
+    question: "Da li je putovanje fizički zahtevno?",
+    answer: "Aktivnosti poput šetnji kroz sela, prirodu i pirinčana polja su umerene i prilagođene osobama sa prosečnom kondicijom. Ne radi se o ekstremnim fizičkim naporima.",
+  },
+  {
+    question: "Da li delimo sobe ili je moguć jednokrevetni smeštaj?",
+    answer: "Osnovna organizacija podrazumeva dvokrevetne sobe. Jednokrevetni smeštaj je moguć uz doplatu, u skladu sa dostupnošću.",
+  },
+  {
+    question: "Da li je potrebna viza za Vijetnam?",
+    answer: "Za većinu putnika viza je potrebna. Sve relevantne informacije i smernice u vezi sa procesom dobijanja vize dobijaju se na vreme.",
+  },
+  {
+    question: "Kakvo je vreme u aprilu?",
+    answer: "April je jedan od najprijatnijih meseci za putovanje. Vreme je toplo, ali uglavnom stabilno, sa razlikama između severnih i centralnih delova zemlje.",
+  },
+  {
+    question: "Da li je ovo putovanje duhovno ili religiozno?",
+    answer: "Putovanje nije religiozno. Uključuje elemente lične introspekcije, prisutnosti i upoznavanja sa lokalnim duhovnim praksama kao što su meditacija, qi gong i budistička kultura, bez nametanja.",
+  },
+  {
+    question: "Koliko slobodnog vremena ima tokom putovanja?",
+    answer: "Slobodno vreme je važan deo iskustva. Postoje dani bez fiksnog plana, namenjeni odmoru, ličnom istraživanju ili potpunom isključivanju.",
+  },
+  {
+    question: "Šta ako želim da produžim boravak u Vijetnamu?",
+    answer: "Ako želite da ostanete duže ili nastavite individualno putovanje, dobićete savete i podršku za dalju organizaciju.",
+  },
+  {
+    question: "Kako se rezerviše mesto?",
+    answer: "Rezervacija se vrši direktnim javljanjem organizatorima. Broj mesta je ograničen, a grupa se formira pažljivo i sa namerom.",
+  },
+  {
+    question: "Zašto je ovo putovanje drugačije?",
+    answer: "Zato što nije zasnovano na brzom obilasku destinacija, već na stvarnom doživljaju zemlje, ljudi i ritma života. Ovo je iskustvo koje se ne meri brojem fotografija, već dubinom utisaka koji ostaju.",
   },
 ];

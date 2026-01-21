@@ -66,8 +66,8 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <p className="text-olive-300 text-sm">Email</p>
-                  <a href="mailto:info@queenofcompass.com" className="text-white hover:text-gold-400 transition-colors">
-                    info@queenofcompass.com
+                  <a href="mailto:hello@queenofcompass.com" className="text-white hover:text-gold-400 transition-colors">
+                    hello@queenofcompass.com
                   </a>
                 </div>
               </div>
