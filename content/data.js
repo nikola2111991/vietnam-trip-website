@@ -244,3 +244,113 @@ export const galleryImages = [
   "/images/istrazujemo-3.webp",
   "/images/istrazujemo-4.webp",
 ];
+
+// Testimonials Content
+export const testimonialsContent = [
+  {
+    name: "Marija Petrović",
+    location: "Beograd, Srbija",
+    text: "Ovo putovanje mi je promenilo pogled na svet. Irena i Bojan su stvorili nešto magično - kombinaciju luksuza i autentičnosti koja je retka. Svaki dan je bio novo otkriće.",
+    rating: 5,
+    image: "/images/testimonial-1.webp",
+  },
+  {
+    name: "Ana Nikolić",
+    location: "Novi Sad, Srbija",
+    text: "Vijetnam sam zamišljala potpuno drugačije. Zahvaljujući njima, videla sam pravu dušu ove zemlje. Od pirinčanih polja do Ha Long zaliva - svaki trenutak je bio savršen.",
+    rating: 5,
+    image: "/images/testimonial-2.webp",
+  },
+  {
+    name: "Jelena Marković",
+    location: "Zagreb, Hrvatska",
+    text: "Najbolje organizovano putovanje na kom sam ikada bila. Pažnja posvećena svakom detalju, od smeštaja do lokalne hrane, bila je neverovatna. Preporučujem svima!",
+    rating: 5,
+    image: "/images/testimonial-3.webp",
+  },
+];
+
+// Gallery Content
+export const galleryContent = [
+  {
+    src: "/images/8-april.webp",
+    alt: "Hanoi - Dolazak",
+    location: "Hanoi",
+  },
+  {
+    src: "/images/11-april.webp",
+    alt: "Pu Luong pirinčana polja",
+    location: "Pu Luong",
+  },
+  {
+    src: "/images/13-april.webp",
+    alt: "Tam Coc - Kopneni Ha Long",
+    location: "Ninh Binh",
+  },
+  {
+    src: "/images/16-april.webp",
+    alt: "Ha Long zaliv",
+    location: "Ha Long Bay",
+  },
+  {
+    src: "/images/18-april.webp",
+    alt: "Da Nang plaža",
+    location: "Da Nang",
+  },
+  {
+    src: "/images/20-april.webp",
+    alt: "Hoi An lampioni",
+    location: "Hoi An",
+  },
+  {
+    src: "/images/istrazujemo-1.webp",
+    alt: "Istraživanje Vijetnama",
+    location: "Vietnam",
+  },
+  {
+    src: "/images/istrazujemo-2.webp",
+    alt: "Lokalna kultura",
+    location: "Vietnam",
+  },
+  {
+    src: "/images/istrazujemo-3.webp",
+    alt: "Prirodne lepote",
+    location: "Vietnam",
+  },
+];
+
+// FAQ Content
+export const faqContent = [
+  {
+    question: "Koji je nivo fizičke spreme potreban za ovo putovanje?",
+    answer: "Putovanje je prilagođeno svim nivoima fizičke spreme. Hiking aktivnosti su umerene i pristupačne, sa mnogo pauza i vremena za uživanje u pejzažu. Uvek postoji mogućnost prilagođavanja tempa prema grupi.",
+  },
+  {
+    question: "Šta je uključeno u cenu od 1890 EUR?",
+    answer: "Cena uključuje sav smeštaj u luksuznim hotelima i resortima, lokalne letove (Hanoi-Da Nang-Hanoi), sav kopneni transport, organizovane izlete i aktivnosti, krstarenje Ha Long zalivom sa svim obrocima, profesionalno vođenje ture i fotografisanje.",
+  },
+  {
+    question: "Da li trebam vizu za Vijetnam?",
+    answer: "Državljani Srbije mogu da uđu u Vijetnam bez vize do 45 dana. Za državljane drugih zemalja, preporučujemo da proverite aktuelne uslove. Rado ćemo vam pomoći sa svim informacijama.",
+  },
+  {
+    question: "Kako funkcioniše rezervacija i uplata?",
+    answer: "Nakon što nas kontaktirate, šaljemo vam detaljne informacije i uslove rezervacije. Rezervacija se potvrđuje uplatom depozita od 30%, a ostatak se uplaćuje najkasnije 30 dana pre polaska.",
+  },
+  {
+    question: "Koliko ljudi će biti u grupi?",
+    answer: "Putujemo u maloj, pažljivo biranoj grupi do maksimalno 12 osoba. Ovo omogućava personalizovano iskustvo i fleksibilnost u programu.",
+  },
+  {
+    question: "Šta ako moram da otkažem putovanje?",
+    answer: "U zavisnosti od vremena otkaza, primenjuju se različiti uslovi. Do 60 dana pre polaska vraćamo 80% uplaćenog iznosa. Preporučujemo putno osiguranje koje pokriva otkaz putovanja.",
+  },
+  {
+    question: "Da li je hrana uključena?",
+    answer: "Doručak je uključen u svim smeštajima. Na krstarenju Ha Long zalivom svi obroci su uključeni. Ostali obroci nisu uključeni, što vam daje slobodu da istražite lokalnu kuhinju po sopstvenom izboru.",
+  },
+  {
+    question: "Mogu li putovati sam/sama?",
+    answer: "Naravno! Mnogi naši putnici dolaze sami i to je odlična prilika za nova poznanstva. Postoji mogućnost deljenja sobe sa drugim putnikom istog pola, ili doplata za jednokrevetnu sobu.",
+  },
+];
