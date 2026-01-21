@@ -95,7 +95,6 @@ export const itineraryContent = [
     location: "Pu Luong",
     description: "Napustili smo urbani ritam i krećemo ka manje otkrivenom Vijetnamu. Put vodi kroz planine, sela etničkih manjina i terase pirinčanih polja. Pu Luong je sirova, neotkrivena priroda, mesto gde se oseća autentični duh severnog Vijetnama. Smeštaj u luksuznom eco resortu.",
     image: "/images/11-april.webp",
-    imagePosition: "bottom",
     section: "PRIRODA OD KOJE ZASTAJE DAH",
   },
   {
@@ -104,7 +103,6 @@ export const itineraryContent = [
     location: "Pu Luong",
     description: "Dan provodimo hodajući kroz sela etničkih manjina, sa lokalnim vodičem šetamo kroz terase pirinčanih polja i planinske staze. Susrećemo lokalne ljude, učimo o njihovim običajima i svakodnevici.",
     image: "/images/12-april.webp",
-    imagePosition: "bottom",
   },
   {
     day: "13. APRIL",
@@ -112,7 +110,6 @@ export const itineraryContent = [
     location: "Tam Coc / Ninh Binh",
     description: "Put ka Ninh Binhu vodi kroz dramatične pejzaže koje često nazivaju 'kopnenim Ha Longom'. Rečni kanali, iznenadni vrhovi krečnjačkih stena i tišina koja obuzima. Smeštaj u retreat resortu uklopljenom u prirodu.",
     image: "/images/13-april.webp",
-    imagePosition: "bottom",
   },
   {
     day: "14. APRIL",
@@ -127,7 +124,6 @@ export const itineraryContent = [
     location: "Tam Coc",
     description: "Jutarnja meditacija i Qi Gong sa Irenom za vraćanje sebi. Dan je za bazen, šetnje, vožnju bicikla ili istraživanje prirode oko resorta.",
     image: "/images/15-april.webp",
-    imagePosition: "bottom",
   },
   {
     day: "16. APRIL",
@@ -157,7 +153,7 @@ export const itineraryContent = [
     location: "Da Nang",
     description: "Jutarnja kakao ceremonija i kratka meditacija na plaži. Dan bez plana: sunce, more, masaže, sportovi na vodi ili kokteli u beach baru. Dan za potpuni reset.",
     image: "/images/19-april.webp",
-    imagePosition: "bottom",
+    imagePosition: "top",
   },
   {
     day: "20. APRIL",
@@ -165,7 +161,6 @@ export const itineraryContent = [
     location: "Hoi An",
     description: "Selimo se u privatnu vilu u Hoi Anu. Grad svetla, boja i fotogenične arhitekture. Oblačenje tradicionalnog Ao Dai uz profesionalno fotografisanje. Radionica izrade lampiona. Veče tradicionalno puštanje lampiona na reci.",
     image: "/images/20-april.webp",
-    imagePosition: "bottom",
     section: "GRAD LAMPIONA, KROJAČA I KERAMIKE",
   },
   {
@@ -181,7 +176,6 @@ export const itineraryContent = [
     location: "Hanoi",
     description: "Let za Hanoi. Za one koji žele da nastave individualno putovanje kroz Vijetnam, ili ostanu duže u Da Nangu, tu smo da vam pružimo savete i podršku.",
     image: "/images/22-april.webp",
-    imagePosition: "bottom",
   },
 ];
 

@@ -1,7 +1,7 @@
 {
-  "name": "neurallabs-website",
+  "name": "vietnam-trip-website",
   "version": "1.0.0",
-  "description": "NeuralLabs - AI-First Software Development Agency",
+  "description": "Autenticno Vijetnam putovanje - Queen of Compass",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,26 +9,17 @@
     "lint": "next lint"
   },
   "keywords": [
-    "AI",
-    "development",
-    "agency",
-    "SaaS",
-    "AI agents",
-    "machine learning"
+    "vietnam",
+    "travel",
+    "luxury",
+    "adventure"
   ],
-  "author": "NeuralLabs",
+  "author": "Queen of Compass",
   "license": "ISC",
   "dependencies": {
-    "@react-three/drei": "^10.7.7",
-    "@react-three/fiber": "^9.5.0",
-    "clsx": "^2.1.1",
-    "framer-motion": "^12.27.5",
-    "lucide-react": "^0.562.0",
     "next": "^16.1.3",
     "react": "^19.2.3",
-    "react-dom": "^19.2.3",
-    "tailwind-merge": "^3.4.0",
-    "three": "^0.182.0"
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.18",
