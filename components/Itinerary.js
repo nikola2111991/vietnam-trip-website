@@ -1,32 +1,8 @@
 'use client'
 
 import { useRef } from 'react'
-import { motion, useInView, useScroll, useTransform } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { itineraryContent } from '@/content/data'
-
-function ParallaxImage({ src, alt, position }) {
-  const ref = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start end', 'end start']
-  })
-
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '15%'])
-
-  return (
-    <div ref={ref} className="rounded-3xl overflow-hidden shadow-2xl">
-      <motion.div style={{ y }} className="relative">
-        <img
-          src={src}
-          alt={alt}
-          className="w-full h-64 lg:h-80 object-cover scale-110"
-          style={{ objectPosition: position || 'center' }}
-          loading="lazy"
-        />
-      </motion.div>
-    </div>
-  )
-}
 
 export default function Itinerary() {
   let currentSection = null
@@ -39,7 +15,8 @@ export default function Itinerary() {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -85,27 +62,17 @@ export default function Itinerary() {
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: '-50px' }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
+                    transition={{ duration: 0.6 }}
                     className={`relative flex flex-col lg:flex-row items-center gap-8 lg:gap-16 py-8 ${
                       index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
                     }`}
                   >
                     {/* Timeline Dot */}
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: 0.2 }}
-                      className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-olive-600 rounded-full border-4 border-white shadow-lg z-10"
-                    />
+                    <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-olive-600 rounded-full border-4 border-white shadow-lg z-10" />
 
                     {/* Content */}
                     <div className={`w-full lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-16 lg:text-right' : 'lg:pl-16'}`}>
-                      <motion.div
-                        whileHover={{ y: -5 }}
-                        transition={{ duration: 0.3 }}
-                        className="bg-olive-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-500"
-                      >
+                      <div className="bg-olive-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-500">
                         <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? 'lg:justify-end' : ''}`}>
                           <span className="px-4 py-1.5 bg-olive-600 text-white text-sm font-bold rounded-full">
                             {item.day}
@@ -120,21 +87,20 @@ export default function Itinerary() {
                         <p className="text-gray-600 leading-relaxed">
                           {item.description}
                         </p>
-                      </motion.div>
+                      </div>
                     </div>
 
-                    {/* Image with Parallax */}
+                    {/* Image */}
                     <div className="w-full lg:w-1/2">
-                      <motion.div
-                        whileHover={{ scale: 1.02 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <ParallaxImage
+                      <div className="rounded-3xl overflow-hidden shadow-2xl">
+                        <img
                           src={item.image}
                           alt={item.title}
-                          position={item.imagePosition}
+                          className="w-full h-64 lg:h-80 object-cover"
+                          style={{ objectPosition: item.imagePosition || 'center' }}
+                          loading="lazy"
                         />
-                      </motion.div>
+                      </div>
                     </div>
                   </motion.div>
                 </div>

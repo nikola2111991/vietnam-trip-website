@@ -5,8 +5,10 @@ import { motion, useInView } from 'framer-motion'
 
 function CountdownTimer({ targetDate }) {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     const calculateTimeLeft = () => {
       const difference = new Date(targetDate) - new Date()
       if (difference > 0) {
@@ -31,23 +33,34 @@ function CountdownTimer({ targetDate }) {
     { value: timeLeft.seconds, label: 'Sekundi' },
   ]
 
+  if (!mounted) {
+    return (
+      <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-8">
+        {timeUnits.map((unit) => (
+          <div key={unit.label} className="text-center">
+            <div className="bg-olive-600 rounded-2xl px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-5 shadow-xl">
+              <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tabular-nums">
+                00
+              </span>
+            </div>
+            <span className="text-sm sm:text-base text-olive-600 font-medium mt-3 block">{unit.label}</span>
+          </div>
+        ))}
+      </div>
+    )
+  }
+
   return (
     <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-8">
-      {timeUnits.map((unit, index) => (
-        <motion.div
-          key={unit.label}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 + index * 0.1 }}
-          className="text-center"
-        >
+      {timeUnits.map((unit) => (
+        <div key={unit.label} className="text-center">
           <div className="bg-olive-600 rounded-2xl px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-5 shadow-xl">
             <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tabular-nums">
               {String(unit.value).padStart(2, '0')}
             </span>
           </div>
           <span className="text-sm sm:text-base text-olive-600 font-medium mt-3 block">{unit.label}</span>
-        </motion.div>
+        </div>
       ))}
     </div>
   )
@@ -62,7 +75,7 @@ export default function Countdown() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
           className="text-center"
         >

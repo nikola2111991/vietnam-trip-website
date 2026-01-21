@@ -1,7 +1,7 @@
 'use client'
 
-import { useState, useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -13,9 +13,6 @@ export default function ContactForm() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const sectionRef = useRef(null)
-  const isInView = useInView(sectionRef, { once: true, margin: '-100px' })
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -36,13 +33,14 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="kontakt" ref={sectionRef} className="bg-olive-800 py-20 lg:py-32">
+    <section id="kontakt" className="bg-olive-800 py-20 lg:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Side - Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.8 }}
           >
             <p className="text-gold-400 font-semibold tracking-wider text-sm mb-4">
@@ -104,15 +102,12 @@ export default function ContactForm() {
           {/* Right Side - Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.8 }}
           >
             {isSubmitted ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="bg-white rounded-3xl p-8 md:p-10 text-center"
-              >
+              <div className="bg-white rounded-3xl p-8 md:p-10 text-center">
                 <div className="w-20 h-20 bg-olive-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <svg className="w-10 h-10 text-olive-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -133,7 +128,7 @@ export default function ContactForm() {
                 >
                   Pošalji novu poruku
                 </button>
-              </motion.div>
+              </div>
             ) : (
               <form onSubmit={handleSubmit} className="bg-white rounded-3xl p-8 md:p-10 shadow-2xl">
                 <div className="space-y-6">
@@ -222,11 +217,9 @@ export default function ContactForm() {
                   </div>
 
                   {/* Submit Button */}
-                  <motion.button
+                  <button
                     type="submit"
                     disabled={isSubmitting}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
                     className="w-full py-4 bg-olive-600 text-white font-semibold rounded-xl hover:bg-olive-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
@@ -240,7 +233,7 @@ export default function ContactForm() {
                     ) : (
                       <span>Pošalji upit</span>
                     )}
-                  </motion.button>
+                  </button>
                 </div>
               </form>
             )}

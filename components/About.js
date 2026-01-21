@@ -40,28 +40,6 @@ const FeatureIcon = ({ icon }) => {
   return icons[icon] || null
 }
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: [0.25, 0.4, 0.25, 1],
-    },
-  },
-}
-
 export default function About() {
   const introRef = useRef(null)
   const featuresRef = useRef(null)
@@ -77,43 +55,24 @@ export default function About() {
             {/* Text Content */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
-              animate={introInView ? { opacity: 1, x: 0 } : {}}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.8 }}
             >
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={introInView ? { opacity: 1 } : {}}
-                transition={{ delay: 0.2 }}
-                className="text-olive-600 font-semibold tracking-wider text-sm mb-4"
-              >
+              <p className="text-olive-600 font-semibold tracking-wider text-sm mb-4">
                 {introContent.subtitle}
-              </motion.p>
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={introInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.3, duration: 0.6 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-olive-800 leading-tight mb-8"
-              >
+              </p>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-olive-800 leading-tight mb-8">
                 {introContent.title}
-              </motion.h2>
+              </h2>
 
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={introInView ? { opacity: 1 } : {}}
-                transition={{ delay: 0.4 }}
-                className="flex items-center space-x-6 mb-8 text-olive-600"
-              >
+              <div className="flex items-center space-x-6 mb-8 text-olive-600">
                 <span className="font-medium">{introContent.duration}</span>
                 <span className="w-2 h-2 bg-gold-400 rounded-full" />
                 <span className="font-medium">{introContent.dates}</span>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={introInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.5, duration: 0.6 }}
-                className="space-y-6"
-              >
+              <div className="space-y-6">
                 <div>
                   <h3 className="text-xl font-bold text-olive-700 mb-3">
                     {introContent.welcomeTitle}
@@ -128,22 +87,19 @@ export default function About() {
                     {introContent.quote}
                   </p>
                 </blockquote>
-              </motion.div>
+              </div>
             </motion.div>
 
             {/* Image Grid */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
-              animate={introInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="grid grid-cols-2 gap-4"
             >
               <div className="space-y-4">
-                <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  transition={{ duration: 0.3 }}
-                  className="rounded-3xl overflow-hidden shadow-xl"
-                >
+                <div className="rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
                   <img
                     src={galleryImages[0]}
                     alt="Vietnam"
@@ -151,45 +107,33 @@ export default function About() {
                     style={{ objectPosition: 'bottom' }}
                     loading="lazy"
                   />
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  transition={{ duration: 0.3 }}
-                  className="rounded-3xl overflow-hidden shadow-xl"
-                >
+                </div>
+                <div className="rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
                   <img
                     src={galleryImages[1]}
                     alt="Vietnam"
                     className="w-full h-48 object-cover"
                     loading="lazy"
                   />
-                </motion.div>
+                </div>
               </div>
               <div className="space-y-4 pt-8">
-                <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  transition={{ duration: 0.3 }}
-                  className="rounded-3xl overflow-hidden shadow-xl"
-                >
+                <div className="rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
                   <img
                     src={galleryImages[2]}
                     alt="Vietnam"
                     className="w-full h-48 object-cover"
                     loading="lazy"
                   />
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  transition={{ duration: 0.3 }}
-                  className="rounded-3xl overflow-hidden shadow-xl"
-                >
+                </div>
+                <div className="rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
                   <img
                     src={galleryImages[3]}
                     alt="Vietnam"
                     className="w-full h-64 object-cover"
                     loading="lazy"
                   />
-                </motion.div>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -201,7 +145,8 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={featuresInView ? { opacity: 1, y: 0 } : {}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -213,18 +158,15 @@ export default function About() {
             </h2>
           </motion.div>
 
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate={featuresInView ? 'visible' : 'hidden'}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuresContent.features.map((feature, index) => (
               <motion.div
                 key={index}
-                variants={itemVariants}
-                whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                className="group bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-500"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
                 <div className="w-16 h-16 bg-olive-100 rounded-2xl flex items-center justify-center text-olive-600 mb-6 group-hover:bg-olive-600 group-hover:text-white transition-all duration-300">
                   <FeatureIcon icon={feature.icon} />
@@ -237,7 +179,7 @@ export default function About() {
                 </p>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

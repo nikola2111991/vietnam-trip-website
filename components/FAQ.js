@@ -1,17 +1,12 @@
 'use client'
 
-import { useState, useRef } from 'react'
-import { motion, useInView, AnimatePresence } from 'framer-motion'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { faqContent } from '@/content/data'
 
 function FAQItem({ question, answer, isOpen, onClick, index }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="border-b border-olive-200 last:border-0"
-    >
+    <div className="border-b border-olive-200 last:border-0">
       <button
         onClick={onClick}
         className="w-full py-6 flex items-center justify-between text-left group"
@@ -22,17 +17,13 @@ function FAQItem({ question, answer, isOpen, onClick, index }) {
         }`}>
           {question}
         </span>
-        <motion.span
-          animate={{ rotate: isOpen ? 45 : 0 }}
-          transition={{ duration: 0.2 }}
-          className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ${
-            isOpen ? 'bg-olive-600 text-white' : 'bg-olive-100 text-olive-600 group-hover:bg-olive-200'
-          }`}
-        >
+        <span className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
+          isOpen ? 'bg-olive-600 text-white rotate-45' : 'bg-olive-100 text-olive-600 group-hover:bg-olive-200'
+        }`}>
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v12m6-6H6" />
           </svg>
-        </motion.span>
+        </span>
       </button>
 
       <AnimatePresence>
@@ -50,22 +41,21 @@ function FAQItem({ question, answer, isOpen, onClick, index }) {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </div>
   )
 }
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0)
-  const sectionRef = useRef(null)
-  const isInView = useInView(sectionRef, { once: true, margin: '-100px' })
 
   return (
-    <section id="faq" ref={sectionRef} className="bg-white py-20 lg:py-32">
+    <section id="faq" className="bg-white py-20 lg:py-32">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -80,8 +70,9 @@ export default function FAQ() {
         {/* FAQ List */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6 }}
           className="bg-olive-50 rounded-3xl p-6 md:p-10"
         >
           {faqContent.map((faq, index) => (
@@ -99,8 +90,9 @@ export default function FAQ() {
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6 }}
           className="text-center mt-12"
         >
           <p className="text-gray-600 mb-4">
