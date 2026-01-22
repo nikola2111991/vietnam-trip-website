@@ -36,7 +36,7 @@ function FAQItem({ question, answer, isOpen, onClick, index }) {
             className="overflow-hidden"
           >
             <div className="pb-6 pr-12">
-              <p className="text-gray-600 leading-relaxed">{answer}</p>
+              <p className="text-gray-600 leading-relaxed whitespace-pre-line">{answer}</p>
             </div>
           </motion.div>
         )}
