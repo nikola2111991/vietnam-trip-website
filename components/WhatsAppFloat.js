@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function WhatsAppFloat() {
   // Broj telefona bez + znaka, samo brojevi
-  const phoneNumber = '38269123456' // Zameni sa pravim brojem
+  const phoneNumber = '381640440467'
   const message = encodeURIComponent('Zdravo! Zanima me putovanje u Vijetnam u aprilu 2026. Možete li mi reći više?')
 
   return (
