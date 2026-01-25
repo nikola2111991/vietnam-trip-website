@@ -10,7 +10,7 @@ export default function Itinerary() {
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' })
 
   return (
-    <section id="itinerar" ref={sectionRef} className="bg-white py-20 lg:py-32">
+    <section id="itinerar" ref={sectionRef} className="bg-white py-20 lg:py-32 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
