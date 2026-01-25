@@ -26,15 +26,34 @@ export default function Navigation() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  // Prevent scroll when mobile menu is open
+  // Prevent scroll when mobile menu is open (iOS Safari fix)
   useEffect(() => {
     if (isMobileMenuOpen) {
+      // Sačuvaj trenutnu poziciju skrola
+      const scrollY = window.scrollY
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollY}px`
+      document.body.style.left = '0'
+      document.body.style.right = '0'
       document.body.style.overflow = 'hidden'
     } else {
-      document.body.style.overflow = 'unset'
+      // Vrati prethodnu poziciju skrola
+      const scrollY = document.body.style.top
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
+      document.body.style.overflow = ''
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || '0', 10) * -1)
+      }
     }
     return () => {
-      document.body.style.overflow = 'unset'
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
+      document.body.style.overflow = ''
     }
   }, [isMobileMenuOpen])
 
@@ -137,6 +156,9 @@ export default function Navigation() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-[998] bg-white md:hidden"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Navigacioni meni"
           >
             <div className="flex flex-col items-center justify-center min-h-screen px-8 py-20">
               <nav className="flex flex-col items-center space-y-6">

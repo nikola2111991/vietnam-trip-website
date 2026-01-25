@@ -32,10 +32,48 @@
     scroll-behavior: smooth;
   }
 
+  /* Poštuj korisnikovu preferencu za reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
   body {
     font-family: var(--font-family-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Focus visible styles za accessibility */
+  :focus-visible {
+    outline: 2px solid var(--color-olive-600);
+    outline-offset: 2px;
+  }
+
+  /* Skip link za screen readers */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-olive-800);
+    color: white;
+    padding: 8px 16px;
+    z-index: 1000;
+    transition: top 0.3s;
+  }
+
+  .skip-link:focus {
+    top: 0;
   }
 }
 
@@ -123,4 +161,33 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #4a5832;
+}
+
+/* Print styles */
+@media print {
+  .fixed,
+  nav,
+  .whatsapp-float,
+  .scroll-top,
+  button {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    color: black;
+    background: white;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
 }
