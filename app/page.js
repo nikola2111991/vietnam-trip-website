@@ -9,6 +9,7 @@ import FAQ from '@/components/FAQ'
 import Footer from '@/components/Footer'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
 import ScrollToTop from '@/components/ScrollToTop'
+import LiveViewers from '@/components/LiveViewers'
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
       {/* Floating elements */}
       <WhatsAppFloat />
       <ScrollToTop />
+      <LiveViewers />
     </main>
   )
 }
