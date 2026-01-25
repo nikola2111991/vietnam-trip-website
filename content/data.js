@@ -183,7 +183,7 @@ export const pricingContent = {
   price: "1890",
   currency: "EUR",
   included: [
-    "Smeštaj u autentičnim 5★ hotelima, retreat resortima i luksuznom kruzeru",
+    "Smeštaj u autentičnim luksuznim hotelima, retreat resortima i luksuznom kruzeru",
     "Sve noći smeštaja prema programu, sa doručkom",
     "Lokalni letovi (Hanoi → Da Nang → Hanoi)",
     "Sav kopneni transport tokom ture, luksuznim kombijima",
